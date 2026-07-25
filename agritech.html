@@ -1,1 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Projet AgriTech - Digitalisation Agricole Intelligente de CEFORE-RUSI par Inteliconnect Africa : IoT, IA et données en temps réel pour l'agriculture." />
+        <meta name="author" content="Inteliconnect Africa" />
+        <title>Projet AgriTech - CEFORE-RUSI | Inteliconnect Africa</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .status-badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.15);
+                border: 1px solid rgba(255,255,255,0.5);
+                color: #fff;
+                padding: 6px 18px;
+                border-radius: 30px;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 1rem;
+            }
+            .tech-badge {
+                display: inline-block;
+                background: var(--bs-light);
+                border: 1px solid #dee2e6;
+                color: #212529;
+                padding: 8px 16px;
+                border-radius: 30px;
+                margin: 4px;
+                font-size: 0.9rem;
+            }
+            .step-circle {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                border-radius: 50%;
+                background: var(--bs-primary);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }
+            .impact-card {
+                border-left: 4px solid var(--bs-primary);
+                background: #fff;
+                border-radius: 4px;
+                padding: 1.5rem;
+                height: 100%;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            }
+            .gallery-placeholder {
+                aspect-ratio: 4/3;
+                background: #e9ecef;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #adb5bd;
+                overflow: hidden;
+            }
+            .gallery-placeholder img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            blockquote.testimony {
+                border-left: 4px solid var(--bs-primary);
+                padding: 1.5rem 2rem;
+                background: #f8f9fa;
+                border-radius: 4px;
+                font-style: italic;
+                font-size: 1.15rem;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="index.html#page-top"><img src="assets/img/navbar-logo.svg" alt="Inteliconnect Africa" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html#page-top">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="domaines.html">Domaines d'intervention</a></li>
+                        <li class="nav-item"><a class="nav-link" href="apropos.html">A Propos de nous</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="projets.html">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header-->
+        <header class="masthead" style="min-height: 55vh;">
+            <div class="container text-center">
+                <span class="status-badge"><i class="fas fa-circle-notch fa-spin me-2"></i>Projet pilote en cours de déploiement</span>
+                <div class="masthead-subheading">Projet AgriTech</div>
+                <div class="masthead-heading text-uppercase">Digitalisation Agricole Intelligente de CEFORE-RUSI</div>
+                <p class="text-white-50 lead mb-4">Transformer l'agriculture grâce aux technologies intelligentes et aux données en temps réel</p>
+                <a class="btn btn-primary btn-xl text-uppercase me-2" href="#presentation">Découvrir le projet</a>
+                <a class="btn btn-outline-light btn-xl text-uppercase" href="contact.html">Nous contacter</a>
+            </div>
+        </header>
+
+        <!-- Présentation -->
+        <section class="page-section" id="presentation">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <h2 class="section-heading text-uppercase">Présentation du Projet</h2>
+                        <p class="text-muted fs-5">
+                            Le projet de Digitalisation Agricole Intelligente de CEFORE-RUSI est une initiative portée par Inteliconnect Africa visant à moderniser les pratiques agricoles grâce aux technologies numériques. Le projet combine l'Internet des Objets (IoT), l'intelligence artificielle, les systèmes embarqués et l'analyse de données afin d'améliorer la productivité agricole, la gestion des ressources et la prise de décision.
+                        </p>
+                        <p class="text-muted fs-5">
+                            Cette initiative s'inscrit dans la vision d'une agriculture africaine plus performante, résiliente et durable face aux défis climatiques et économiques actuels.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contexte et Problématique -->
+        <section class="page-section bg-light" id="contexte">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Contexte et Problématique</h2>
+                    <p class="text-muted">L'agriculture demeure l'un des principaux piliers de l'économie africaine. Cependant, de nombreux producteurs continuent à faire face à plusieurs défis :</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Difficulté de suivi des cultures à grande échelle</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Gestion inefficace de l'irrigation</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Manque de données fiables pour la prise de décision</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Variabilité climatique croissante</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Utilisation peu optimisée des ressources agricoles</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Faible intégration des technologies numériques</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center text-muted fst-italic mt-3">Ces contraintes entraînent une baisse des rendements agricoles et limitent la compétitivité des exploitations.</p>
+            </div>
+        </section>
+
+        <!-- Objectifs -->
+        <section class="page-section" id="objectifs">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Objectifs du Projet</h2>
+                </div>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <h4 class="text-primary">Objectif Général</h4>
+                        <p class="text-muted fs-5">Contribuer à la transformation numérique de l'agriculture grâce à la mise en œuvre de technologies intelligentes adaptées aux réalités locales.</p>
+                    </div>
+                </div>
+                <h4 class="text-center text-primary mb-4">Objectifs Spécifiques</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Digitaliser jusqu'à 100 hectares de terres agricoles</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Mettre en place un système de surveillance connecté</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Collecter des données agricoles en temps réel</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Optimiser l'utilisation de l'eau et des intrants</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Renforcer les capacités des producteurs agricoles</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Développer une plateforme d'aide à la décision</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Promouvoir une agriculture durable et résiliente</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Développée -->
+        <section class="page-section bg-light" id="solution">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Solution Développée</h2>
+                    <p class="text-muted">Inteliconnect Africa développe une plateforme intégrée de gestion agricole comprenant :</p>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-temperature-half fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Capteurs de température</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-droplet fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Capteurs d'humidité du sol</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-cloud-sun-rain fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Station météo connectée</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-desktop fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Plateforme web de supervision</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-mobile-screen fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Application mobile de suivi</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-bell fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Alertes automatiques</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-database fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Collecte et analyse des données</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-satellite fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Surveillance à distance</h5>
+                    </div>
+                </div>
+                <p class="text-center text-muted fst-italic mt-4">L'ensemble du système permet aux gestionnaires agricoles de surveiller leurs exploitations à distance et d'intervenir rapidement lorsque cela est nécessaire.</p>
+            </div>
+        </section>
+
+        <!-- Technologies Utilisées -->
+        <section class="page-section" id="technologies">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Technologies Utilisées</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-primary mb-3"><i class="fas fa-microchip me-2"></i>Matériels</h5>
+                        <div>
+                            <span class="tech-badge">ESP32</span>
+                            <span class="tech-badge">ESP8266</span>
+                            <span class="tech-badge">Arduino</span>
+                            <span class="tech-badge">Modules GSM</span>
+                            <span class="tech-badge">Capteurs DHT22</span>
+                            <span class="tech-badge">Capteurs d'humidité du sol</span>
+                            <span class="tech-badge">Capteurs environnementaux</span>
+                            <span class="tech-badge">Panneaux solaires</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-primary mb-3"><i class="fas fa-code me-2"></i>Logiciels</h5>
+                        <div>
+                            <span class="tech-badge">Angular</span>
+                            <span class="tech-badge">Ionic</span>
+                            <span class="tech-badge">Capacitor</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Leaflet</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">TensorFlow Lite</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-primary mb-3"><i class="fas fa-layer-group me-2"></i>Technologies</h5>
+                        <div>
+                            <span class="tech-badge">Internet des Objets (IoT)</span>
+                            <span class="tech-badge">TinyML</span>
+                            <span class="tech-badge">Edge Intelligence</span>
+                            <span class="tech-badge">Intelligence Artificielle</span>
+                            <span class="tech-badge">Cloud Computing</span>
+                            <span class="tech-badge">Géolocalisation GPS</span>
+                            <span class="tech-badge">Systèmes Embarqués</span>
+                            <span class="tech-badge">Agriculture de Précision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Méthodologie -->
+        <section class="page-section bg-light" id="methodologie">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Méthodologie</h2>
+                    <p class="text-muted">Le projet est mis en œuvre suivant une démarche structurée :</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex mb-4"><span class="step-circle me-3">1</span><div class="pt-2 text-muted">Analyse des besoins</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">2</span><div class="pt-2 text-muted">Étude du terrain</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">3</span><div class="pt-2 text-muted">Cartographie des parcelles</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">4</span><div class="pt-2 text-muted">Conception de l'architecture IoT</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">5</span><div class="pt-2 text-muted">Développement des prototypes</div></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex mb-4"><span class="step-circle me-3">6</span><div class="pt-2 text-muted">Installation des équipements</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">7</span><div class="pt-2 text-muted">Collecte des données</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">8</span><div class="pt-2 text-muted">Analyse des performances</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">9</span><div class="pt-2 text-muted">Formation des utilisateurs</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">10</span><div class="pt-2 text-muted">Amélioration continue du système</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Résultats Attendus -->
+        <section class="page-section" id="resultats">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Résultats Attendus</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Mise en place d'une infrastructure agricole connectée</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Surveillance en temps réel des paramètres agricoles</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Réduction des pertes liées aux décisions tardives</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Optimisation de l'utilisation de l'eau</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Amélioration de la gestion des cultures</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Disponibilité d'indicateurs agricoles fiables</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Renforcement des capacités techniques des producteurs</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galerie du Projet -->
+        <section class="page-section bg-light" id="galerie">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Galerie du Projet</h2>
+                    <p class="text-muted"><em>Remplacez ces images par vos vraies photos du terrain (parcelles, capteurs, formations, interfaces...)</em></p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/1.jpg" alt="Parcelles agricoles" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/2.jpg" alt="Équipements installés" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/3.jpg" alt="Capteurs intelligents" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/4.jpg" alt="Activités de terrain" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/5.jpg" alt="Formations réalisées" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/6.jpg" alt="Interfaces web et mobiles" /></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact du Projet -->
+        <section class="page-section" id="impact">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Impact du Projet</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="impact-card">
+                            <i class="fas fa-coins text-primary fa-2x mb-3"></i>
+                            <h5>Impact Économique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Amélioration de la productivité agricole</li>
+                                <li>Réduction des coûts d'exploitation</li>
+                                <li>Optimisation des ressources disponibles</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="impact-card">
+                            <i class="fas fa-people-group text-primary fa-2x mb-3"></i>
+                            <h5>Impact Social</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Renforcement des compétences numériques</li>
+                                <li>Modernisation des pratiques agricoles</li>
+                                <li>Promotion de l'innovation rurale</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="impact-card">
+                            <i class="fas fa-leaf text-primary fa-2x mb-3"></i>
+                            <h5>Impact Environnemental</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Utilisation rationnelle de l'eau</li>
+                                <li>Réduction du gaspillage des ressources</li>
+                                <li>Meilleure adaptation aux changements climatiques</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="impact-card">
+                            <i class="fas fa-microchip text-primary fa-2x mb-3"></i>
+                            <h5>Impact Technologique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Adoption des technologies IoT</li>
+                                <li>IA appliquée à l'agriculture</li>
+                                <li>Écosystèmes agricoles intelligents</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Témoignage -->
+        <section class="page-section bg-light" id="temoignage">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <blockquote class="testimony text-muted">
+                            « Ce projet ouvre de nouvelles perspectives pour la gestion intelligente de nos exploitations agricoles grâce à l'utilisation des technologies numériques adaptées au contexte local. »
+                        </blockquote>
+                        <p class="text-end text-primary fw-bold mb-0">— Responsable du Projet CEFORE-RUSI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partenaires -->
+        <section class="page-section" id="partenaires">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Partenaires</h2>
+                </div>
+                <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <i class="fas fa-building-flag text-primary fa-2x mb-2"></i>
+                        <h5>Porteur du Projet</h5>
+                        <p class="text-muted">Inteliconnect Africa</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-location-dot text-primary fa-2x mb-2"></i>
+                        <h5>Site Pilote</h5>
+                        <p class="text-muted">CEFORE-RUSI</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-graduation-cap text-primary fa-2x mb-2"></i>
+                        <h5>Partenaires Académiques</h5>
+                        <p class="text-muted mb-0">Université du Burundi (École Doctorale)</p>
+                        <p class="text-muted">Centres de recherche CRIET</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chiffres Clés -->
+        <section class="page-section bg-light" id="chiffres-cles">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Chiffres Clés</h2>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 col-md-3 mb-4">
+                        <i class="fas fa-map text-primary fa-2x mb-2"></i>
+                        <h3 class="fw-bold">100</h3>
+                        <p class="text-muted text-uppercase small">Hectares ciblés</p>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <i class="fas fa-desktop text-primary fa-2x mb-2"></i>
+                        <h3 class="fw-bold">1</h3>
+                        <p class="text-muted text-uppercase small">Plateforme web</p>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <i class="fas fa-mobile-screen text-primary fa-2x mb-2"></i>
+                        <h3 class="fw-bold">1</h3>
+                        <p class="text-muted text-uppercase small">Application mobile</p>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <i class="fas fa-satellite-dish text-primary fa-2x mb-2"></i>
+                        <h3 class="fw-bold">+</h3>
+                        <p class="text-muted text-uppercase small">Capteurs déployés</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perspectives Futures -->
+        <section class="page-section" id="perspectives">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Perspectives Futures</h2>
+                    <p class="text-muted">Les prochaines étapes du projet incluent :</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">L'intégration de modèles prédictifs basés sur TinyML</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">Le développement de systèmes d'irrigation intelligents</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">La prédiction des besoins hydriques</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">L'automatisation de certaines opérations agricoles</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">L'extension du projet à d'autres exploitations agricoles au Burundi et dans la région</span></li>
+                        </ul>
+                        <p class="text-center text-muted fst-italic mt-3">À terme, cette initiative ambitionne de devenir un modèle de référence pour l'agriculture intelligente en Afrique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appel à l'action -->
+        <section class="page-section bg-primary text-center" id="cta-agritech">
+            <div class="container">
+                <h2 class="section-heading text-uppercase text-white">Vous souhaitez déployer une solution similaire ?</h2>
+                <p class="text-white-50 fs-5 mb-4">Inteliconnect Africa accompagne les entreprises, institutions, ONG, coopératives et exploitations agricoles dans la conception et le déploiement de solutions numériques innovantes.</p>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-8">
+                        <div class="row text-white-50">
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Études de faisabilité</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Digitalisation agricole</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Développement IoT</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Intelligence artificielle</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Formation technique</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-light btn-xl text-uppercase" href="contact.html">Nous contacter</a>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Inteliconnect Africa 2026</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-social mx-2" style="background-color:#FF0000; color:#fff;" href="https://www.youtube.com/channel/UCnn7EInu4WU8NsWKwDGHlHQ" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-social mx-2" style="background-color:#1877F2; color:#fff;" href="https://www.facebook.com/IntelliconnectAfrica" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="politiquesdeconfidentialite.html">Politiques de Confidentialité</a>
+                        <a class="link-dark text-decoration-none" href="mentionslegales.html">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
 
