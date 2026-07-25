@@ -1,1 +1,709 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Projet de Co-optimisation Énergétique des Systèmes IoT Agricoles Distribués par TinyML et Edge Intelligence - Intelliconnect Africa." />
+        <meta name="author" content="Intelliconnect Africa" />
+        <title>Co-optimisation Énergétique IoT Agricole | Intelliconnect Africa</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .status-badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.15);
+                border: 1px solid rgba(255,255,255,0.5);
+                color: #fff;
+                padding: 6px 18px;
+                border-radius: 30px;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 1rem;
+            }
+            .tech-badge {
+                display: inline-block;
+                background: #ffffff;
+                border: 1px solid #dee2e6;
+                color: #212529;
+                padding: 8px 16px;
+                border-radius: 30px;
+                margin: 4px;
+                font-size: 0.9rem;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            .tech-badge:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+            }
+            .step-circle {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                border-radius: 50%;
+                background: #198754;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }
+            /* Sections colorées */
+            .bg-section-white { background: #ffffff; }
+            .bg-section-green { background: #eafaf1; }
+            .bg-section-orange { background: #fff4e6; }
+            .bg-section-dark-green { background: #198754; }
+
+            /* Cartes avec effet hover */
+            .card-hover {
+                background: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+                height: 100%;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+            }
+            .impact-card {
+                border-left: 4px solid #198754;
+                padding: 1.5rem;
+            }
+            .layer-card {
+                border-top: 4px solid #198754;
+                padding: 1.5rem;
+                height: 100%;
+            }
+            blockquote.testimony {
+                border-left: 4px solid #198754;
+                padding: 1.5rem 2rem;
+                background: #ffffff;
+                border-radius: 4px;
+                font-style: italic;
+                font-size: 1.15rem;
+            }
+            .phase-card {
+                border-radius: 10px;
+                padding: 1.5rem;
+                height: 100%;
+                background: #ffffff;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            }
+            .phase-number {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: #198754;
+                color: #fff;
+                font-weight: bold;
+                margin-bottom: 0.75rem;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="index.html#page-top"><img src="assets/img/navbar-logo.svg" alt="Intelliconnect Africa" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html#page-top">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">A propos de nous</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Domaines d'intervention</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="team.html">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header-->
+        <header class="masthead" style="min-height: 55vh;">
+            <div class="container text-center">
+                <span class="status-badge"><i class="fas fa-circle-notch fa-spin me-2"></i>Projet de recherche et développement en cours</span>
+                <div class="masthead-subheading">Résilience Énergétique des Architectures IoT Agricoles Distribuées</div>
+                <div class="masthead-heading text-uppercase">Co-optimisation Énergétique des Systèmes IoT Agricoles par TinyML et Edge Intelligence</div>
+                <p class="text-white-50 lead mb-4">Co-optimisation solaire par TinyML et Edge Intelligence pour une agriculture intelligente durable en Afrique</p>
+                <p class="text-white-50 mb-4"><i class="fas fa-location-dot me-2"></i>Zone d'expérimentation : CEFORE-RUSI, Burundi</p>
+                <a class="btn btn-success btn-xl text-uppercase me-2" href="#presentation">Découvrir le projet</a>
+                <a class="btn btn-outline-light btn-xl text-uppercase" href="contact.html">Nous contacter</a>
+            </div>
+        </header>
+
+        <!-- Présentation (blanc) -->
+        <section class="page-section bg-section-white" id="presentation">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <h2 class="section-heading text-uppercase">Présentation du Projet</h2>
+                        <p class="text-muted fs-5">
+                            Le projet de co-optimisation énergétique des systèmes IoT agricoles distribués est une initiative de recherche et d'innovation portée par Intelliconnect Africa visant à améliorer la résilience énergétique des infrastructures agricoles intelligentes déployées dans les zones rurales.
+                        </p>
+                        <p class="text-muted fs-5">
+                            Cette recherche développe une architecture innovante combinant l'énergie solaire, l'Internet des Objets (IoT), le Tiny Machine Learning (TinyML) et l'Edge Intelligence afin de permettre aux dispositifs agricoles connectés de fonctionner de manière autonome, fiable et durable même dans des environnements caractérisés par des contraintes énergétiques importantes.
+                        </p>
+                        <p class="text-muted fs-5">
+                            Le projet est actuellement expérimenté au Centre de Formation et de Recherche CEFORE-RUSI et constitue l'un des premiers travaux de recherche appliquée au Burundi intégrant simultanément les technologies IoT agricoles, l'intelligence artificielle embarquée et les systèmes énergétiques intelligents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contexte et Problématique (orange) -->
+        <section class="page-section bg-section-orange" id="contexte">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Contexte et Problématique</h2>
+                    <p class="text-muted">L'agriculture intelligente repose de plus en plus sur des capteurs connectés permettant de collecter en temps réel des données sur l'humidité du sol, la température, la luminosité, les conditions météorologiques, l'état des cultures et l'irrigation. Cependant, dans les régions rurales africaines, ces systèmes sont confrontés à plusieurs défis majeurs :</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Accès limité à l'électricité</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Pannes fréquentes des batteries</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Coûts élevés de maintenance</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Faible autonomie énergétique des capteurs</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Difficultés de communication entre les dispositifs</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Conditions climatiques variables</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Interruption des services de surveillance agricole</p></div>
+                    </div>
+                </div>
+                <p class="text-center text-muted fst-italic mt-4">Ces contraintes réduisent considérablement l'efficacité des systèmes agricoles intelligents et limitent leur adoption à grande échelle.</p>
+            </div>
+        </section>
+
+        <!-- Objectifs (vert) -->
+        <section class="page-section bg-section-green" id="objectifs">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Objectifs du Projet</h2>
+                </div>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <h4 class="text-success">Objectif Général</h4>
+                        <p class="text-muted fs-5">Développer une architecture IoT agricole distribuée capable d'assurer une résilience énergétique élevée grâce à la co-optimisation solaire pilotée par TinyML et Edge Intelligence.</p>
+                    </div>
+                </div>
+                <h4 class="text-center text-success mb-4">Objectifs Spécifiques</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Concevoir une architecture IoT agricole distribuée adaptée aux zones rurales africaines</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Développer des modèles TinyML capables de prédire les besoins énergétiques des dispositifs</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Mettre en place un mécanisme d'Edge Intelligence pour la gestion dynamique des ressources</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Optimiser l'utilisation de l'énergie solaire produite localement</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Réduire la consommation énergétique globale du système</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Améliorer la continuité de service des infrastructures agricoles connectées</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Développer un prototype expérimental fonctionnel au CEFORE-RUSI</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Développée (blanc) -->
+        <section class="page-section bg-section-white" id="solution">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Solution Développée</h2>
+                    <p class="text-muted">Intelliconnect Africa développe une plateforme intégrée composée de plusieurs couches technologiques interconnectées :</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="layer-card card-hover">
+                            <i class="fas fa-seedling text-success fa-2x mb-3"></i>
+                            <h5>Couche Terrain</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Capteurs de température</li>
+                                <li>Capteurs d'humidité du sol</li>
+                                <li>Capteurs de luminosité</li>
+                                <li>Stations météorologiques intelligentes</li>
+                                <li>Compteurs énergétiques</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="layer-card card-hover">
+                            <i class="fas fa-tower-broadcast text-success fa-2x mb-3"></i>
+                            <h5>Couche Communication</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Réseaux LoRa</li>
+                                <li>Réseaux Wi-Fi</li>
+                                <li>Modules GSM</li>
+                                <li>Passerelles intelligentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="layer-card card-hover">
+                            <i class="fas fa-solar-panel text-success fa-2x mb-3"></i>
+                            <h5>Couche Énergétique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Panneaux solaires autonomes</li>
+                                <li>Batteries intelligentes</li>
+                                <li>Contrôleurs de charge</li>
+                                <li>Gestion adaptative de l'énergie</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="layer-card card-hover">
+                            <i class="fas fa-brain text-success fa-2x mb-3"></i>
+                            <h5>Couche Intelligence</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>TinyML embarqué</li>
+                                <li>Edge Intelligence</li>
+                                <li>Analyse prédictive</li>
+                                <li>Gestion énergétique autonome</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="layer-card card-hover">
+                            <i class="fas fa-display text-success fa-2x mb-3"></i>
+                            <h5>Couche Utilisateur</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Tableau de bord Web</li>
+                                <li>Application mobile</li>
+                                <li>Alertes intelligentes</li>
+                                <li>Rapports analytiques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies (orange) -->
+        <section class="page-section bg-section-orange" id="technologies">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Technologies Utilisées</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-success mb-3"><i class="fas fa-microchip me-2"></i>Matériel</h5>
+                        <div>
+                            <span class="tech-badge">ESP32</span>
+                            <span class="tech-badge">Arduino</span>
+                            <span class="tech-badge">Capteurs DHT22</span>
+                            <span class="tech-badge">Capteurs d'humidité du sol</span>
+                            <span class="tech-badge">Modules LoRa</span>
+                            <span class="tech-badge">Modules GSM</span>
+                            <span class="tech-badge">Panneaux solaires</span>
+                            <span class="tech-badge">Batteries intelligentes</span>
+                            <span class="tech-badge">Passerelles Edge Computing</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-success mb-3"><i class="fas fa-code me-2"></i>Logiciels</h5>
+                        <div>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">TensorFlow Lite</span>
+                            <span class="tech-badge">Grafana</span>
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">Tableau de bord Edge personnalisé</span>
+                            <span class="tech-badge">MATLAB / Simulink</span>
+                            <span class="tech-badge">Cooja Contiki-NG</span>
+                            <span class="tech-badge">NS-3</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-success mb-3"><i class="fas fa-layer-group me-2"></i>Technologies Avancées</h5>
+                        <div>
+                            <span class="tech-badge">Internet des Objets (IoT)</span>
+                            <span class="tech-badge">TinyML</span>
+                            <span class="tech-badge">Edge Intelligence</span>
+                            <span class="tech-badge">Edge AI</span>
+                            <span class="tech-badge">Intelligence Artificielle Embarquée</span>
+                            <span class="tech-badge">Énergies Renouvelables</span>
+                            <span class="tech-badge">Cloud Computing</span>
+                            <span class="tech-badge">Analyse Prédictive</span>
+                            <span class="tech-badge">Agriculture de Précision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Méthodologie (vert) -->
+        <section class="page-section bg-section-green" id="methodologie">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Méthodologie</h2>
+                    <p class="text-muted">Le projet suit une démarche scientifique rigoureuse en cinq phases :</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="phase-card">
+                            <span class="phase-number">1</span>
+                            <h6 class="fw-bold">Analyse et conception</h6>
+                            <ul class="text-muted ps-3 mb-0 small">
+                                <li>Revue de littérature</li>
+                                <li>Étude des besoins agricoles</li>
+                                <li>Analyse énergétique</li>
+                                <li>Conception de l'architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="phase-card">
+                            <span class="phase-number">2</span>
+                            <h6 class="fw-bold">Développement</h6>
+                            <ul class="text-muted ps-3 mb-0 small">
+                                <li>Développement des dispositifs IoT</li>
+                                <li>Développement des modèles TinyML</li>
+                                <li>Développement du système Edge Intelligence</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="phase-card">
+                            <span class="phase-number">3</span>
+                            <h6 class="fw-bold">Déploiement</h6>
+                            <ul class="text-muted ps-3 mb-0 small">
+                                <li>Installation au CEFORE-RUSI</li>
+                                <li>Intégration des équipements</li>
+                                <li>Tests fonctionnels</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="phase-card">
+                            <span class="phase-number">4</span>
+                            <h6 class="fw-bold">Collecte et analyse</h6>
+                            <ul class="text-muted ps-3 mb-0 small">
+                                <li>Acquisition des données terrain</li>
+                                <li>Évaluation énergétique</li>
+                                <li>Analyse statistique</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="phase-card">
+                            <span class="phase-number">5</span>
+                            <h6 class="fw-bold">Validation</h6>
+                            <ul class="text-muted ps-3 mb-0 small">
+                                <li>Tests comparatifs</li>
+                                <li>Validation scientifique</li>
+                                <li>Optimisation du système</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Résultats Attendus (blanc) -->
+        <section class="page-section bg-section-white" id="resultats">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Résultats Attendus</h2>
+                    <p class="text-muted">Le projet vise à produire des résultats techniques, scientifiques et opérationnels :</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="text-success text-center mb-3">Résultats Techniques</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Architecture IoT agricole distribuée opérationnelle</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Modèle de co-optimisation énergétique fonctionnel</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Intégration du TinyML embarqué</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Mécanisme Edge Intelligence déployé</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Plateforme de supervision temps réel</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Infrastructure solaire autonome</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-success text-center mb-3">Résultats Scientifiques</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Nouveau modèle de résilience énergétique</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Publications scientifiques internationales</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Contributions à la recherche sur TinyML agricole</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Validation expérimentale en contexte africain</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-success text-center mb-3">Résultats Opérationnels</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Augmentation de l'autonomie énergétique</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Réduction des interruptions de service</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Amélioration de la continuité des opérations agricoles</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Réduction des coûts de maintenance</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Optimisation de l'utilisation de l'énergie solaire</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact (orange) -->
+        <section class="page-section bg-section-orange" id="impact">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Impact du Projet</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-hover impact-card">
+                            <i class="fas fa-coins text-success fa-2x mb-3"></i>
+                            <h5>Impact Économique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Réduction des coûts d'exploitation agricole</li>
+                                <li>Réduction des coûts de maintenance énergétique</li>
+                                <li>Augmentation de la rentabilité des infrastructures numériques agricoles</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-hover impact-card">
+                            <i class="fas fa-people-group text-success fa-2x mb-3"></i>
+                            <h5>Impact Social</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Renforcement des capacités technologiques locales</li>
+                                <li>Formation des chercheurs et ingénieurs</li>
+                                <li>Développement de compétences avancées en IA et IoT</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-hover impact-card">
+                            <i class="fas fa-leaf text-success fa-2x mb-3"></i>
+                            <h5>Impact Environnemental</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Promotion des énergies renouvelables</li>
+                                <li>Réduction de la dépendance aux sources fossiles</li>
+                                <li>Optimisation des ressources naturelles</li>
+                                <li>Agriculture plus durable et résiliente</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-hover impact-card">
+                            <i class="fas fa-flask text-success fa-2x mb-3"></i>
+                            <h5>Impact Scientifique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Résilience énergétique des systèmes IoT distribués</li>
+                                <li>TinyML appliqué à l'énergie</li>
+                                <li>Edge Intelligence pour environnements contraints</li>
+                                <li>Architectures agricoles intelligentes adaptées à l'Afrique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Témoignage (vert) -->
+        <section class="page-section bg-section-green" id="temoignage">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <blockquote class="testimony text-muted">
+                            « Cette recherche ouvre la voie à une nouvelle génération d'infrastructures agricoles intelligentes capables de fonctionner durablement dans les zones rurales africaines malgré les contraintes énergétiques. »
+                        </blockquote>
+                        <p class="text-end text-success fw-bold mb-0">— Équipe de Recherche, Intelliconnect Africa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partenaires (blanc) -->
+        <section class="page-section bg-section-white" id="partenaires">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Partenaires du Projet</h2>
+                </div>
+                <div class="row g-4 justify-content-center text-center">
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-building-flag text-success fa-2x mb-2"></i>
+                            <h6 class="mb-0">Porteur du Projet</h6>
+                            <p class="text-muted small mb-0">Intelliconnect Africa</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-school text-success fa-2x mb-2"></i>
+                            <p class="text-muted small mb-0">CEFORE-RUSI</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-graduation-cap text-success fa-2x mb-2"></i>
+                            <p class="text-muted small mb-0">Université du Burundi</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-graduation-cap text-success fa-2x mb-2"></i>
+                            <p class="text-muted small mb-0">Université de Dschang</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-flask text-success fa-2x mb-2"></i>
+                            <p class="text-muted small mb-0">Centres de recherche partenaires</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-people-group text-success fa-2x mb-2"></i>
+                            <p class="text-muted small mb-0">Communautés agricoles locales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chiffres Clés (orange) -->
+        <section class="page-section bg-section-orange" id="chiffres-cles">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Chiffres Clés</h2>
+                </div>
+                <div class="row text-center g-3">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-tractor text-success fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">100</h4>
+                            <p class="text-muted text-uppercase small mb-0">Hectares : zone agricole cible</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-satellite-dish text-success fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">20</h4>
+                            <p class="text-muted text-uppercase small mb-0">Capteurs IoT déployés</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-solar-panel text-success fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">10</h4>
+                            <p class="text-muted text-uppercase small mb-0">Nœuds énergétiques solaires</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-desktop text-success fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">1</h4>
+                            <p class="text-muted text-uppercase small mb-0">Plateforme Web de supervision</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-mobile-screen text-success fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">1</h4>
+                            <p class="text-muted text-uppercase small mb-0">Application mobile de suivi</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-microchip text-success fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">1</h4>
+                            <p class="text-muted text-uppercase small mb-0">Architecture TinyML & Edge</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perspectives Futures (blanc) -->
+        <section class="page-section bg-section-white" id="perspectives">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Perspectives Futures</h2>
+                    <p class="text-muted">Intelliconnect Africa prévoit :</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">L'extension du système à d'autres provinces du Burundi</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">L'intégration de modèles prédictifs avancés basés sur l'IA</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">La création d'un jumeau numérique agricole</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">L'intégration de systèmes de maintenance prédictive</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">Le déploiement régional dans plusieurs pays africains</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">L'utilisation de l'architecture pour la surveillance climatique et environnementale</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appel à l'action (vert plein) -->
+        <section class="page-section bg-section-dark-green text-center" id="cta-optimisation">
+            <div class="container">
+                <h2 class="section-heading text-uppercase text-white">Vous souhaitez collaborer à ce projet ?</h2>
+                <p class="text-white-50 fs-5 mb-4">Vous souhaitez moderniser vos infrastructures agricoles grâce aux technologies intelligentes et aux énergies renouvelables ? Intelliconnect Africa vous accompagne.</p>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-8">
+                        <div class="row text-white-50">
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Digitalisation agricole</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Déploiement de systèmes IoT</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Intelligence artificielle</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Solutions énergétiques intelligentes</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Recherche appliquée</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Innovation durable</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-light btn-xl text-uppercase" href="contact.html">Nous contacter</a>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Intelliconnect Africa 2026</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-social mx-2" style="background-color:#FF0000; color:#fff;" href="https://www.youtube.com/channel/UCnn7EInu4WU8NsWKwDGHlHQ" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-social mx-2" style="background-color:#1877F2; color:#fff;" href="https://www.facebook.com/IntelliconnectAfrica" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="politiquesdeconfidentialite.html">Politiques de Confidentialité</a>
+                        <a class="link-dark text-decoration-none" href="mentionslegales.html">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
 
