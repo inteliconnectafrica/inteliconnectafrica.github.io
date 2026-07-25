@@ -1,1 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Projet Sac à Dos Intelligent Antivol - Sécurisation des biens personnels grâce à l'IoT et aux applications mobiles, par Intelliconnect Africa." />
+        <meta name="author" content="Intelliconnect Africa" />
+        <title>Sac à Dos Intelligent Antivol | Intelliconnect Africa</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .status-badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.15);
+                border: 1px solid rgba(255,255,255,0.5);
+                color: #fff;
+                padding: 6px 18px;
+                border-radius: 30px;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 1rem;
+            }
+            .tech-badge {
+                display: inline-block;
+                background: #ffffff;
+                border: 1px solid #dee2e6;
+                color: #212529;
+                padding: 8px 16px;
+                border-radius: 30px;
+                margin: 4px;
+                font-size: 0.9rem;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            .tech-badge:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+            }
+            .step-circle {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                border-radius: 50%;
+                background: #0d6efd;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }
+            /* Sections colorées */
+            .bg-section-white { background: #ffffff; }
+            .bg-section-blue { background: #eaf2fe; }
+            .bg-section-orange { background: #fff4e6; }
+            .bg-section-dark-blue { background: #0d6efd; }
+
+            /* Cartes avec effet hover */
+            .card-hover {
+                background: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+                height: 100%;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+            }
+            .impact-card {
+                border-left: 4px solid #0d6efd;
+                padding: 1.5rem;
+            }
+            .feature-card {
+                border-top: 4px solid #0d6efd;
+                padding: 1.5rem;
+                height: 100%;
+            }
+            blockquote.testimony {
+                border-left: 4px solid #0d6efd;
+                padding: 1.5rem 2rem;
+                background: #ffffff;
+                border-radius: 4px;
+                font-style: italic;
+                font-size: 1.15rem;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="index.html#page-top"><img src="assets/img/navbar-logo.svg" alt="Intelliconnect Africa" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html#page-top">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">A propos de nous</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Domaines d'intervention</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="team.html">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header-->
+        <header class="masthead" style="min-height: 55vh;">
+            <div class="container text-center">
+                <span class="status-badge"><i class="fas fa-circle-check me-2"></i>Projet terminé</span>
+                <div class="masthead-subheading">« Protéger vos biens, où que vous soyez. »</div>
+                <div class="masthead-heading text-uppercase">Sac à Dos Intelligent Antivol</div>
+                <p class="text-white-50 lead mb-4">Sécurisation des biens personnels grâce à l'Internet des Objets (IoT) et aux applications mobiles</p>
+                <a class="btn btn-primary btn-xl text-uppercase me-2" href="#presentation">Découvrir le projet</a>
+                <a class="btn btn-outline-light btn-xl text-uppercase" href="contact.html">Nous contacter</a>
+            </div>
+        </header>
+
+        <!-- Présentation (blanc) -->
+        <section class="page-section bg-section-white" id="presentation">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <h2 class="section-heading text-uppercase">Présentation du Projet</h2>
+                        <p class="text-muted fs-5">
+                            Le projet Sac à Dos Intelligent Antivol est une solution innovante développée par Intelliconnect Africa dans le cadre des travaux de recherche appliquée en Internet des Objets (IoT), systèmes embarqués et applications mobiles intelligentes.
+                        </p>
+                        <p class="text-muted fs-5">
+                            Le projet vise à renforcer la sécurité des biens personnels grâce à un sac connecté capable de détecter les tentatives de vol, de transmettre des alertes en temps réel et de permettre la localisation du sac à distance via une application mobile dédiée.
+                        </p>
+                        <p class="text-muted fs-5">
+                            Cette innovation a été développée comme prototype fonctionnel dans le cadre du mémoire de Master en Ingénierie des Services et Objets Connectés de Oredy Jean Paul KASHINDI, soutenu à l'Université de Dschang au Cameroun. Le système combine capteurs intelligents, géolocalisation GPS, connectivité sans fil et contrôle à distance pour offrir une protection proactive aux utilisateurs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contexte et Problématique (orange) -->
+        <section class="page-section bg-section-orange" id="contexte">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Contexte et Problème Identifié</h2>
+                    <p class="text-muted">Les étudiants, voyageurs, professionnels et usagers des transports publics sont régulièrement confrontés à :</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">La perte ou le vol de sacs à dos</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">La difficulté à localiser les biens dérobés</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">L'absence d'alerte en cas d'ouverture non autorisée</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Le manque de systèmes de sécurité accessibles et intelligents</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-hover p-3 text-center"><i class="fas fa-triangle-exclamation text-warning fa-lg mb-2"></i><p class="text-muted mb-0 small">Les pertes financières liées aux objets personnels volés</p></div>
+                    </div>
+                </div>
+                <p class="text-center text-muted fst-italic mt-4">Face à ces défis, Intelliconnect Africa a conçu une solution intelligente permettant une surveillance continue et une réaction rapide en cas d'incident.</p>
+            </div>
+        </section>
+
+        <!-- Objectifs (bleu) -->
+        <section class="page-section bg-section-blue" id="objectifs">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Objectifs du Projet</h2>
+                </div>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <h4 class="text-primary">Objectif Général</h4>
+                        <p class="text-muted fs-5">Concevoir un système intelligent de protection des biens personnels basé sur l'Internet des Objets et une application mobile.</p>
+                    </div>
+                </div>
+                <h4 class="text-center text-primary mb-4">Objectifs Spécifiques</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary me-3 mt-1"></i><span class="text-muted">Détecter toute tentative d'ouverture non autorisée</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary me-3 mt-1"></i><span class="text-muted">Déclencher une alarme sonore à distance</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary me-3 mt-1"></i><span class="text-muted">Permettre la localisation GPS du sac</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary me-3 mt-1"></i><span class="text-muted">Envoyer des notifications en temps réel à l'utilisateur</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary me-3 mt-1"></i><span class="text-muted">Améliorer la sécurité des effets personnels</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-primary me-3 mt-1"></i><span class="text-muted">Réduire les risques de perte et de vol</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Développée (blanc) -->
+        <section class="page-section bg-section-white" id="solution">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Solution Développée</h2>
+                    <p class="text-muted">Intelliconnect Africa a conçu une architecture intégrée comprenant :</p>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div class="feature-card card-hover">
+                            <i class="fas fa-backpack text-primary fa-2x mb-3"></i>
+                            <h5>Sac connecté intelligent</h5>
+                            <p class="text-muted mb-2">Le sac est équipé de :</p>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Capteurs de détection d'ouverture</li>
+                                <li>Module GPS</li>
+                                <li>Module GSM</li>
+                                <li>Système d'alarme sonore</li>
+                                <li>Carte ESP32</li>
+                                <li>Batterie rechargeable</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="feature-card card-hover">
+                            <i class="fas fa-mobile-screen text-primary fa-2x mb-3"></i>
+                            <h5>Application mobile</h5>
+                            <p class="text-muted mb-2">L'application permet :</p>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>L'activation et la désactivation de l'alarme</li>
+                                <li>Le suivi GPS en temps réel</li>
+                                <li>La réception de notifications</li>
+                                <li>La gestion des paramètres de sécurité</li>
+                                <li>La personnalisation des alertes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fonctionnalités Principales (bleu) -->
+        <section class="page-section bg-section-blue" id="fonctionnalites">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Fonctionnalités Principales</h2>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-hover p-4">
+                            <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-bell fa-stack-1x fa-inverse"></i></span>
+                            <h5 class="my-3">Alerte antivol</h5>
+                            <p class="text-muted small">Lorsqu'une ouverture non autorisée est détectée, le système déclenche immédiatement une alarme sonore et notifie l'utilisateur.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-hover p-4">
+                            <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-location-dot fa-stack-1x fa-inverse"></i></span>
+                            <h5 class="my-3">Localisation GPS</h5>
+                            <p class="text-muted small">Le sac transmet sa position géographique afin d'être localisé sur une carte interactive en temps réel.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-hover p-4">
+                            <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-satellite-dish fa-stack-1x fa-inverse"></i></span>
+                            <h5 class="my-3">Contrôle à distance</h5>
+                            <p class="text-muted small">L'utilisateur peut activer ou désactiver l'alarme directement depuis son smartphone.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-hover p-4">
+                            <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-bell-concierge fa-stack-1x fa-inverse"></i></span>
+                            <h5 class="my-3">Notifications intelligentes</h5>
+                            <p class="text-muted small">Le système envoie automatiquement des notifications en cas d'événement suspect ou d'anomalie.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-hover p-4">
+                            <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-primary"></i><i class="fas fa-sliders fa-stack-1x fa-inverse"></i></span>
+                            <h5 class="my-3">Gestion personnalisée</h5>
+                            <p class="text-muted small">Configuration des paramètres de sécurité, fréquence GPS et préférences de notification.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies (orange) -->
+        <section class="page-section bg-section-orange" id="technologies">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Technologies Utilisées</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-primary mb-3"><i class="fas fa-microchip me-2"></i>Matériels</h5>
+                        <div>
+                            <span class="tech-badge">ESP32 WROOM DevKit</span>
+                            <span class="tech-badge">Module GPS NEO-6M</span>
+                            <span class="tech-badge">Module GSM/GPRS</span>
+                            <span class="tech-badge">Capteur métallique KY-036</span>
+                            <span class="tech-badge">Buzzer d'alarme</span>
+                            <span class="tech-badge">Batterie rechargeable</span>
+                        </div>
+                        <p class="text-muted small mt-3">La carte ESP32 offre le Wi-Fi, le Bluetooth et une capacité de traitement élevée adaptée aux applications IoT. Le module GPS NEO-6M assure une géolocalisation précise du sac avec une précision comprise entre 2 et 5 mètres.</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-primary mb-3"><i class="fas fa-code me-2"></i>Logiciels</h5>
+                        <div>
+                            <span class="tech-badge">Ionic Framework</span>
+                            <span class="tech-badge">Angular</span>
+                            <span class="tech-badge">Capacitor</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Google Maps API</span>
+                            <span class="tech-badge">Arduino IDE</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-primary mb-3"><i class="fas fa-layer-group me-2"></i>Technologies</h5>
+                        <div>
+                            <span class="tech-badge">Internet des Objets (IoT)</span>
+                            <span class="tech-badge">Géolocalisation GPS</span>
+                            <span class="tech-badge">Cloud Mobile</span>
+                            <span class="tech-badge">Systèmes embarqués</span>
+                            <span class="tech-badge">Notifications Push</span>
+                            <span class="tech-badge">Communication GSM</span>
+                            <span class="tech-badge">Bluetooth Low Energy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Méthodologie (bleu) -->
+        <section class="page-section bg-section-blue" id="methodologie">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Méthodologie</h2>
+                    <p class="text-muted">Le développement a été réalisé selon la méthodologie Agile Scrum :</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex mb-4"><span class="step-circle me-3">1</span><div class="pt-2 text-muted">Analyse des besoins</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">2</span><div class="pt-2 text-muted">Conception UML</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">3</span><div class="pt-2 text-muted">Développement de l'application mobile</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">4</span><div class="pt-2 text-muted">Développement embarqué ESP32</div></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex mb-4"><span class="step-circle me-3">5</span><div class="pt-2 text-muted">Intégration GPS et GSM</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">6</span><div class="pt-2 text-muted">Développement du système d'alarme</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">7</span><div class="pt-2 text-muted">Tests d'intégration</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">8</span><div class="pt-2 text-muted">Validation du prototype</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Résultats Obtenus (blanc) -->
+        <section class="page-section bg-section-white" id="resultats">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Résultats Obtenus</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-3 mt-1"></i><span class="text-muted">Prototype intelligent entièrement fonctionnel</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-3 mt-1"></i><span class="text-muted">Application mobile opérationnelle</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-3 mt-1"></i><span class="text-muted">Activation de l'alarme à distance</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-3 mt-1"></i><span class="text-muted">Géolocalisation GPS en temps réel</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-3 mt-1"></i><span class="text-muted">Notifications instantanées</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-3 mt-1"></i><span class="text-muted">Paramétrage personnalisé des alertes</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-3 mt-1"></i><span class="text-muted">Architecture IoT validée</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact (orange) -->
+        <section class="page-section bg-section-orange" id="impact">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Impact du Projet</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-hover impact-card">
+                            <i class="fas fa-shield-halved text-primary fa-2x mb-3"></i>
+                            <h5>Impact Sécuritaire</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Réduction des risques de vol</li>
+                                <li>Protection accrue des biens personnels</li>
+                                <li>Réactivité immédiate face aux incidents</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-hover impact-card">
+                            <i class="fas fa-microchip text-primary fa-2x mb-3"></i>
+                            <h5>Impact Technologique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Valorisation des technologies IoT africaines</li>
+                                <li>Développement d'une solution locale innovante</li>
+                                <li>Promotion de la recherche appliquée</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-hover impact-card">
+                            <i class="fas fa-coins text-primary fa-2x mb-3"></i>
+                            <h5>Impact Économique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Réduction des pertes liées aux vols</li>
+                                <li>Possibilités de commercialisation du produit</li>
+                                <li>Création de valeur technologique locale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Témoignage (bleu) -->
+        <section class="page-section bg-section-blue" id="temoignage">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <blockquote class="testimony text-muted">
+                            « Ce projet démontre comment les technologies IoT peuvent être mises au service de la sécurité quotidienne. Le prototype développé offre une réponse concrète à un problème réel rencontré par de nombreux citoyens. »
+                        </blockquote>
+                        <p class="text-end text-primary fw-bold mb-0">— Équipe de Recherche, Intelliconnect Africa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partenaires (blanc) -->
+        <section class="page-section bg-section-white" id="partenaires">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Partenaires</h2>
+                </div>
+                <div class="row g-4 justify-content-center text-center">
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-building-flag text-primary fa-2x mb-2"></i>
+                            <h6 class="mb-0">Porteur du Projet</h6>
+                            <p class="text-muted small mb-0">Intelliconnect Africa</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-graduation-cap text-primary fa-2x mb-2"></i>
+                            <p class="text-muted small mb-0">Université de Dschang (Cameroun)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-flask text-primary fa-2x mb-2"></i>
+                            <p class="text-muted small mb-0">Laboratoire d'Ingénierie des Services et Objets Connectés</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-user-gear text-primary fa-2x mb-2"></i>
+                            <p class="text-muted small mb-0">Experts en IoT et systèmes embarqués</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chiffres Clés (orange) -->
+        <section class="page-section bg-section-orange" id="chiffres-cles">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Chiffres Clés</h2>
+                </div>
+                <div class="row text-center g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-backpack text-primary fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">1</h4>
+                            <p class="text-muted text-uppercase small mb-0">Sac connecté intelligent</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-mobile-screen text-primary fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">1</h4>
+                            <p class="text-muted text-uppercase small mb-0">Application mobile dédiée</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-location-crosshairs text-primary fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">2-5 m</h4>
+                            <p class="text-muted text-uppercase small mb-0">Précision de géolocalisation GPS</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card-hover p-3">
+                            <i class="fas fa-clock text-primary fa-2x mb-2"></i>
+                            <h4 class="fw-bold mb-0">Temps réel</h4>
+                            <p class="text-muted text-uppercase small mb-0">Suivi et alertes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perspectives Futures (blanc) -->
+        <section class="page-section bg-section-white" id="perspectives">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Perspectives Futures</h2>
+                    <p class="text-muted">Intelliconnect Africa prévoit une évolution du système vers :</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">L'intégration de l'intelligence artificielle pour détecter automatiquement les comportements suspects</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">La reconnaissance biométrique du propriétaire</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">L'intégration de caméras miniatures intelligentes</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">Le suivi multi-utilisateurs</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">Une plateforme cloud de gestion centralisée</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-primary me-3 mt-1"></i><span class="text-muted">La commercialisation du produit à grande échelle en Afrique</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appel à l'action (bleu plein) -->
+        <section class="page-section bg-section-dark-blue text-center" id="cta-securite">
+            <div class="container">
+                <h2 class="section-heading text-uppercase text-white">Vous souhaitez développer une solution IoT intelligente ?</h2>
+                <p class="text-white-50 fs-5 mb-4">Intelliconnect Africa vous accompagne dans la conception de systèmes connectés innovants adaptés à vos besoins.</p>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-8">
+                        <div class="row text-white-50">
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Étude de faisabilité</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Développement de prototypes</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Applications mobiles</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>IoT & Intelligence Artificielle</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Recherche et innovation</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-light btn-xl text-uppercase me-2" href="contact.html">Demander une consultation</a>
+                <a class="btn btn-outline-light btn-xl text-uppercase" href="contact.html">Devenir partenaire</a>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Intelliconnect Africa 2026</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-social mx-2" style="background-color:#FF0000; color:#fff;" href="https://www.youtube.com/channel/UCnn7EInu4WU8NsWKwDGHlHQ" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-social mx-2" style="background-color:#1877F2; color:#fff;" href="https://www.facebook.com/IntelliconnectAfrica" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="politiquesdeconfidentialite.html">Politiques de Confidentialité</a>
+                        <a class="link-dark text-decoration-none" href="mentionslegales.html">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
 
