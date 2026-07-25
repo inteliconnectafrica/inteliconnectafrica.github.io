@@ -1,1 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Projet Technologies Climatiques - Système intelligent de surveillance des gaz à effet de serre au Burundi par Inteliconnect Africa." />
+        <meta name="author" content="Inteliconnect Africa" />
+        <title>Projet Technologies Climatiques | Inteliconnect Africa</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .status-badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.15);
+                border: 1px solid rgba(255,255,255,0.5);
+                color: #fff;
+                padding: 6px 18px;
+                border-radius: 30px;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 1rem;
+            }
+            .tech-badge {
+                display: inline-block;
+                background: var(--bs-light);
+                border: 1px solid #dee2e6;
+                color: #212529;
+                padding: 8px 16px;
+                border-radius: 30px;
+                margin: 4px;
+                font-size: 0.9rem;
+            }
+            .step-circle {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                border-radius: 50%;
+                background: #198754;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }
+            .impact-card {
+                border-left: 4px solid #198754;
+                background: #fff;
+                border-radius: 4px;
+                padding: 1.5rem;
+                height: 100%;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            }
+            .gallery-placeholder {
+                aspect-ratio: 4/3;
+                background: #e9ecef;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #adb5bd;
+                overflow: hidden;
+            }
+            .gallery-placeholder img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            blockquote.testimony {
+                border-left: 4px solid #198754;
+                padding: 1.5rem 2rem;
+                background: #f8f9fa;
+                border-radius: 4px;
+                font-style: italic;
+                font-size: 1.15rem;
+            }
+            .bg-climat {
+                background: #198754 !important;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="index.html#page-top"><img src="assets/img/navbar-logo.svg" alt="Inteliconnect Africa" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html#page-top">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">A propos de nous</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Domaines d'intervention</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="team.html">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header-->
+        <header class="masthead" style="min-height: 55vh;">
+            <div class="container text-center">
+                <span class="status-badge"><i class="fas fa-circle-notch fa-spin me-2"></i>Projet de recherche et de déploiement pilote en cours</span>
+                <div class="masthead-subheading">Projet Technologies Climatiques</div>
+                <div class="masthead-heading text-uppercase">Système Intelligent de Surveillance des Gaz à Effet de Serre au Burundi</div>
+                <p class="text-white-50 lead mb-4">Surveiller aujourd'hui pour protéger le climat de demain</p>
+                <a class="btn btn-primary btn-xl text-uppercase me-2" href="#presentation">Découvrir le projet</a>
+                <a class="btn btn-outline-light btn-xl text-uppercase" href="contact.html">Nous contacter</a>
+            </div>
+        </header>
+
+        <!-- Présentation -->
+        <section class="page-section" id="presentation">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <h2 class="section-heading text-uppercase">Présentation du Projet</h2>
+                        <p class="text-muted fs-5">
+                            Le Projet de Surveillance Intelligente des Gaz à Effet de Serre est une initiative innovante portée par Inteliconnect Africa visant à renforcer les capacités de surveillance environnementale au Burundi grâce aux technologies numériques avancées.
+                        </p>
+                        <p class="text-muted fs-5">
+                            Le projet consiste à déployer un réseau de capteurs intelligents capables de détecter en temps réel la présence et les concentrations de certains gaz à effet de serre dans l'atmosphère. Les données collectées sont automatiquement transmises vers une application mobile et une plateforme web permettant aux autorités compétentes, aux institutions environnementales et aux chercheurs de suivre l'évolution des indicateurs climatiques et d'être alertés immédiatement en cas de dépassement de seuils critiques.
+                        </p>
+                        <p class="text-muted fs-5">
+                            L'expérimentation pilote est actuellement menée dans la <strong>Province de Bujumbura</strong> avec l'ambition d'étendre progressivement le système à l'ensemble du territoire national.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contexte et Problématique -->
+        <section class="page-section bg-light" id="contexte">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Contexte et Problématique</h2>
+                    <p class="text-muted">Les changements climatiques constituent aujourd'hui l'un des plus grands défis environnementaux auxquels l'Afrique est confrontée. Au Burundi, les mécanismes de surveillance atmosphérique restent limités. Les principaux défis identifiés sont :</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Absence de systèmes de surveillance climatique en temps réel</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Difficulté d'accès aux données atmosphériques locales</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Manque d'outils d'alerte précoce</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Faible intégration des technologies numériques dans le suivi environnemental</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Insuffisance des données pour soutenir les politiques climatiques</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-triangle-exclamation text-warning me-3 mt-1"></i><span class="text-muted">Besoin croissant d'outils de gestion des risques environnementaux</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center text-muted fst-italic mt-3">Face à ces défis, Inteliconnect Africa développe une solution technologique adaptée au contexte local permettant de renforcer les capacités nationales de suivi climatique.</p>
+            </div>
+        </section>
+
+        <!-- Objectifs -->
+        <section class="page-section" id="objectifs">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Objectifs du Projet</h2>
+                </div>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <h4 class="text-success">Objectif Général</h4>
+                        <p class="text-muted fs-5">Mettre en place un système intelligent de surveillance et d'alerte climatique capable de détecter en temps réel les gaz à effet de serre et de fournir des informations fiables aux décideurs.</p>
+                    </div>
+                </div>
+                <h4 class="text-center text-success mb-4">Objectifs Spécifiques</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Déployer un réseau pilote de capteurs environnementaux connectés</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Surveiller les concentrations de gaz atmosphériques</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Collecter et centraliser les données climatiques</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Développer une application mobile de suivi environnemental</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Mettre en place une plateforme web de supervision</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Générer des alertes automatiques en cas d'anomalie</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Faciliter la prise de décision environnementale</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success me-3 mt-1"></i><span class="text-muted">Produire des données utiles à la recherche climatique</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Développée -->
+        <section class="page-section bg-light" id="solution">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Solution Développée</h2>
+                    <p class="text-muted">Inteliconnect Africa développe une plateforme intégrée de surveillance climatique comprenant :</p>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-success"></i><i class="fas fa-wind fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Capteurs de qualité de l'air</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-success"></i><i class="fas fa-smog fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Capteurs de gaz à effet de serre</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-success"></i><i class="fas fa-tower-broadcast fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Stations environnementales connectées</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-success"></i><i class="fas fa-chart-line fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Plateforme web de visualisation</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-success"></i><i class="fas fa-mobile-screen fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Application mobile d'alerte et de suivi</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-success"></i><i class="fas fa-gauge-high fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Analyse en temps réel</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-success"></i><i class="fas fa-table-columns fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Tableau de bord décisionnel</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="fa-stack fa-4x"><i class="fas fa-circle fa-stack-2x text-success"></i><i class="fas fa-bell fa-stack-1x fa-inverse"></i></span>
+                        <h5 class="my-3">Alerte automatique</h5>
+                    </div>
+                </div>
+                <p class="text-center text-muted fst-italic mt-4">Le système est conçu pour fonctionner de manière autonome et transmettre instantanément les informations collectées aux responsables concernés.</p>
+            </div>
+        </section>
+
+        <!-- Technologies Utilisées -->
+        <section class="page-section" id="technologies">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Technologies Utilisées</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-success mb-3"><i class="fas fa-microchip me-2"></i>Matériels</h5>
+                        <div>
+                            <span class="tech-badge">ESP32</span>
+                            <span class="tech-badge">ESP8266</span>
+                            <span class="tech-badge">Modules GSM/GPRS</span>
+                            <span class="tech-badge">Modules GPS</span>
+                            <span class="tech-badge">Capteurs MQ-135</span>
+                            <span class="tech-badge">Capteurs MQ-2</span>
+                            <span class="tech-badge">Capteurs MQ-7</span>
+                            <span class="tech-badge">Capteurs DHT22</span>
+                            <span class="tech-badge">Panneaux solaires</span>
+                            <span class="tech-badge">Batteries autonomes</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-success mb-3"><i class="fas fa-code me-2"></i>Logiciels</h5>
+                        <div>
+                            <span class="tech-badge">Angular</span>
+                            <span class="tech-badge">Ionic</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Leaflet</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">TensorFlow Lite</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <h5 class="text-success mb-3"><i class="fas fa-layer-group me-2"></i>Technologies</h5>
+                        <div>
+                            <span class="tech-badge">Internet des Objets (IoT)</span>
+                            <span class="tech-badge">Intelligence Artificielle</span>
+                            <span class="tech-badge">Edge Computing</span>
+                            <span class="tech-badge">Cloud Computing</span>
+                            <span class="tech-badge">Big Data Environnemental</span>
+                            <span class="tech-badge">Géolocalisation</span>
+                            <span class="tech-badge">Analyse Prédictive</span>
+                            <span class="tech-badge">Surveillance Environnementale Connectée</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Méthodologie -->
+        <section class="page-section bg-light" id="methodologie">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Méthodologie</h2>
+                    <p class="text-muted">Le projet suit les étapes suivantes :</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex mb-4"><span class="step-circle me-3">1</span><div class="pt-2 text-muted">Analyse des besoins environnementaux</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">2</span><div class="pt-2 text-muted">Étude des zones pilotes</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">3</span><div class="pt-2 text-muted">Conception de l'architecture IoT</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">4</span><div class="pt-2 text-muted">Développement des prototypes</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">5</span><div class="pt-2 text-muted">Calibration des capteurs</div></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex mb-4"><span class="step-circle me-3">6</span><div class="pt-2 text-muted">Déploiement sur le terrain</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">7</span><div class="pt-2 text-muted">Collecte des données atmosphériques</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">8</span><div class="pt-2 text-muted">Développement des applications</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">9</span><div class="pt-2 text-muted">Tests et validation</div></div>
+                        <div class="d-flex mb-4"><span class="step-circle me-3">10</span><div class="pt-2 text-muted">Production des rapports environnementaux</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Résultats Attendus -->
+        <section class="page-section" id="resultats">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Résultats Attendus</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Déploiement d'un réseau pilote de surveillance climatique</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Collecte continue des données atmosphériques</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Détection précoce des anomalies environnementales</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Transmission instantanée des alertes</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Disponibilité d'une plateforme nationale de suivi climatique</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Amélioration des capacités d'aide à la décision</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-check text-success me-3 mt-1"></i><span class="text-muted">Production de données scientifiques locales</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galerie du Projet -->
+        <section class="page-section bg-light" id="galerie">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Galerie du Projet</h2>
+                    <p class="text-muted"><em>Remplacez ces images par vos vraies photos (stations, capteurs, cartes, interfaces...)</em></p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/6.jpg" alt="Équipements installés" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/5.jpg" alt="Stations de surveillance" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/4.jpg" alt="Activités de terrain" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/3.jpg" alt="Capteurs environnementaux" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/2.jpg" alt="Cartes de géolocalisation" /></div></div>
+                    <div class="col-lg-4 col-sm-6"><div class="gallery-placeholder"><img src="assets/img/portfolio/1.jpg" alt="Tableaux de bord analytiques" /></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact du Projet -->
+        <section class="page-section" id="impact">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Impact du Projet</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="impact-card">
+                            <i class="fas fa-coins text-success fa-2x mb-3"></i>
+                            <h5>Impact Économique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Réduction des coûts liés aux interventions tardives</li>
+                                <li>Meilleure planification des actions environnementales</li>
+                                <li>Renforcement des capacités nationales de gestion climatique</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="impact-card">
+                            <i class="fas fa-people-group text-success fa-2x mb-3"></i>
+                            <h5>Impact Social</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Sensibilisation des communautés aux enjeux climatiques</li>
+                                <li>Accès à une information environnementale fiable</li>
+                                <li>Amélioration de la sécurité environnementale</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="impact-card">
+                            <i class="fas fa-leaf text-success fa-2x mb-3"></i>
+                            <h5>Impact Environnemental</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Détection précoce des risques atmosphériques</li>
+                                <li>Réduction des impacts climatiques</li>
+                                <li>Renforcement du suivi de la qualité de l'air</li>
+                                <li>Soutien aux politiques de protection de l'environnement</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="impact-card">
+                            <i class="fas fa-microchip text-success fa-2x mb-3"></i>
+                            <h5>Impact Technologique</h5>
+                            <ul class="text-muted ps-3 mb-0">
+                                <li>Introduction des technologies IoT environnementales au Burundi</li>
+                                <li>Valorisation de la recherche scientifique nationale</li>
+                                <li>Systèmes intelligents de surveillance climatique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Témoignage -->
+        <section class="page-section bg-light" id="temoignage">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <blockquote class="testimony text-muted">
+                            « Ce projet constitue une étape importante vers la modernisation des mécanismes de surveillance environnementale au Burundi et la production de données climatiques fiables pour soutenir la prise de décision. »
+                        </blockquote>
+                        <p class="text-end text-success fw-bold mb-0">— Équipe de Recherche et Innovation, Inteliconnect Africa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partenaires -->
+        <section class="page-section" id="partenaires">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Partenaires</h2>
+                </div>
+                <div class="row text-center g-4 justify-content-center">
+                    <div class="col-md-3 col-6">
+                        <i class="fas fa-building-flag text-success fa-2x mb-2"></i>
+                        <h5>Porteur du Projet</h5>
+                        <p class="text-muted">Inteliconnect Africa</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <i class="fas fa-location-dot text-success fa-2x mb-2"></i>
+                        <h5>Zone Pilote</h5>
+                        <p class="text-muted">Province de Bujumbura</p>
+                    </div>
+                    <div class="col-md-6">
+                        <i class="fas fa-handshake text-success fa-2x mb-2"></i>
+                        <h5>Partenaires Potentiels</h5>
+                        <p class="text-muted mb-0">Institutions environnementales, Centres de recherche, Universités partenaires, Organismes de protection de l'environnement, Collectivités territoriales</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chiffres Clés -->
+        <section class="page-section bg-light" id="chiffres-cles">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Chiffres Clés</h2>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 col-md-3 mb-4">
+                        <i class="fas fa-location-dot text-success fa-2x mb-2"></i>
+                        <h3 class="fw-bold">Bujumbura</h3>
+                        <p class="text-muted text-uppercase small">Province pilote</p>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <i class="fas fa-satellite-dish text-success fa-2x mb-2"></i>
+                        <h3 class="fw-bold">24/7</h3>
+                        <p class="text-muted text-uppercase small">Surveillance en temps réel</p>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <i class="fas fa-mobile-screen text-success fa-2x mb-2"></i>
+                        <h3 class="fw-bold">1</h3>
+                        <p class="text-muted text-uppercase small">Application mobile dédiée</p>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <i class="fas fa-bell text-success fa-2x mb-2"></i>
+                        <h3 class="fw-bold">Instant.</h3>
+                        <p class="text-muted text-uppercase small">Alertes automatiques</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perspectives Futures -->
+        <section class="page-section" id="perspectives">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-heading text-uppercase">Perspectives Futures</h2>
+                    <p class="text-muted">Les prochaines phases du projet prévoient :</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">L'extension du réseau de surveillance à plusieurs provinces</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">L'intégration de modèles d'intelligence artificielle prédictive</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">La prévision des risques climatiques</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">La cartographie nationale des émissions</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">Le développement d'un observatoire climatique numérique</span></li>
+                            <li class="mb-3 d-flex"><i class="fas fa-arrow-right text-success me-3 mt-1"></i><span class="text-muted">L'intégration avec les systèmes nationaux de gestion des catastrophes</span></li>
+                        </ul>
+                        <p class="text-center text-muted fst-italic mt-3">À long terme, Inteliconnect Africa ambitionne de contribuer à la mise en place d'un réseau national intelligent de surveillance climatique capable de soutenir les politiques environnementales, la recherche scientifique et les engagements du Burundi en matière de développement durable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appel à l'action -->
+        <section class="page-section bg-climat text-center" id="cta-climat">
+            <div class="container">
+                <h2 class="section-heading text-uppercase text-white">Vous souhaitez collaborer à ce projet ?</h2>
+                <p class="text-white-50 fs-5 mb-4">Inteliconnect Africa accompagne les institutions publiques, ONG, entreprises et centres de recherche dans la conception de solutions numériques dédiées à l'environnement, au climat et au développement durable.</p>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-8">
+                        <div class="row text-white-50">
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Surveillance climatique intelligente</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Internet des Objets (IoT)</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>IA appliquée</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Systèmes d'alerte précoce</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Analyse environnementale</div>
+                            <div class="col-6 col-md-4 mb-2"><i class="fas fa-check me-2"></i>Transformation numérique publique</div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-light btn-xl text-uppercase" href="contact.html">Nous contacter</a>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Inteliconnect Africa 2026</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-social mx-2" style="background-color:#FF0000; color:#fff;" href="https://www.youtube.com/channel/UCnn7EInu4WU8NsWKwDGHlHQ" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-social mx-2" style="background-color:#1877F2; color:#fff;" href="https://www.facebook.com/IntelliconnectAfrica" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="politiquesdeconfidentialite.html">Politiques de Confidentialité</a>
+                        <a class="link-dark text-decoration-none" href="mentionslegales.html">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
 
