@@ -47,6 +47,96 @@
             text-align:center;
             border-radius:10px;
         }
+        /* --- Style personnalisé pour cette section --- */
+    #certification-ica .section-heading {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    #certification-ica .section-subheading {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+    }
+
+    #certification-ica .cert-card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #certification-ica .cert-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    #certification-ica .cert-card-img-wrapper {
+        width: 100%;
+        height: 210px;
+        overflow: hidden;
+    }
+
+    #certification-ica .cert-card-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    #certification-ica .cert-card:hover .cert-card-img-wrapper img {
+        transform: scale(1.08);
+    }
+
+    #certification-ica .cert-card-body {
+        padding: 25px 22px 30px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    #certification-ica .cert-card-body h4 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+        min-height: 48px;
+    }
+
+    #certification-ica .cert-card-body p {
+        color: #6c757d;
+        font-size: 0.92rem;
+        flex-grow: 1;
+        margin-bottom: 22px;
+    }
+
+    #certification-ica .btn-cert {
+        display: inline-block;
+        background-color: #1e8449; /* vert professionnel */
+        color: #ffffff !important;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 10px 28px;
+        border-radius: 30px;
+        border: 2px solid #1e8449;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-decoration: none;
+        font-size: 0.85rem;
+    }
+
+    #certification-ica .btn-cert:hover {
+        background-color: #ffffff;
+        color: #1e8449 !important;
+        border-color: #1e8449;
+        text-decoration: none;
+    }
     </style>
 </head>
 
@@ -90,6 +180,96 @@
             </p>
         </div>
     </header>
+     <!-- La section des cartes  -->
+   <section class="page-section bg-light" id="certification-ica">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Certification I.C.A / Formations</h2>
+            <h3 class="section-subheading text-muted">
+                Intelliconnect Africa vous accompagne dans le renforcement de vos compétences numériques
+                grâce à un dispositif complet de certification et de formation. Que vous souhaitiez valider
+                vos acquis, vous entraîner avant un examen officiel, ou suivre une formation gratuite ou
+                approfondie, découvrez le parcours qui correspond à vos besoins.
+            </h3>
+        </div>
+
+        <div class="row gy-4">
+
+            <!-- Carte 1 : Certifications Professionnelles I.C.A -->
+            <div class="col-lg-3 col-md-6">
+                <div class="cert-card">
+                    <div class="cert-card-img-wrapper">
+                        <img src="assets/img/certification/certifications-ica.jpg" alt="Certifications Professionnelles I.C.A" />
+                    </div>
+                    <div class="cert-card-body">
+                        <h4>Certifications Professionnelles I.C.A</h4>
+                        <p>
+                            Obtenez un certificat vérifié reconnu, attestant de vos compétences techniques
+                            et numériques selon les standards du marché du travail et de l'économie
+                            numérique africaine.
+                        </p>
+                        <a class="btn-cert" href="#">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 2 : Test d'Entraînement -->
+            <div class="col-lg-3 col-md-6">
+                <div class="cert-card">
+                    <div class="cert-card-img-wrapper">
+                        <img src="assets/img/certification/test-entrainement.jpg" alt="Test d'Entraînement" />
+                    </div>
+                    <div class="cert-card-body">
+                        <h4>Test d'Entraînement</h4>
+                        <p>
+                            Préparez-vous efficacement à vos examens de certification grâce à des tests
+                            blancs interactifs, conçus pour évaluer votre niveau et renforcer votre
+                            confiance avant le jour J.
+                        </p>
+                        <a class="btn-cert" href="#">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 3 : Formations Professionnelles Gratuites -->
+            <div class="col-lg-3 col-md-6">
+                <div class="cert-card">
+                    <div class="cert-card-img-wrapper">
+                        <img src="assets/img/certification/formations-gratuites.jpg" alt="Formations Professionnelles Gratuites" />
+                    </div>
+                    <div class="cert-card-body">
+                        <h4>Formations Professionnelles Gratuites</h4>
+                        <p>
+                            Accédez librement à une sélection de modules de formation en ligne pour
+                            acquérir les bases essentielles dans les domaines du numérique, de l'IoT
+                            et des technologies émergentes.
+                        </p>
+                        <a class="btn-cert" href="#">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 4 : Formations Professionnelles Payantes -->
+            <div class="col-lg-3 col-md-6">
+                <div class="cert-card">
+                    <div class="cert-card-img-wrapper">
+                        <img src="assets/img/certification/formations-payantes.jpg" alt="Formations Professionnelles Payantes" />
+                    </div>
+                    <div class="cert-card-body">
+                        <h4>Formations Professionnelles Payantes</h4>
+                        <p>
+                            Suivez des programmes de formation approfondis, encadrés par des experts,
+                            avec accompagnement personnalisé, évaluation continue et certification
+                            finale garantissant une réelle valeur ajoutée sur le marché de l'emploi.
+                        </p>
+                        <a class="btn-cert" href="#">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- Formulaire -->
     <section class="page-section bg-light">
