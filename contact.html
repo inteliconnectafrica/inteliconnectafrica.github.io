@@ -147,7 +147,8 @@
     </section>
 
     <!-- Formulaire -->
-    <section class="page-section" id="contact">
+    
+<section class="page-section" id="contact">
     <div class="container">
         <div class="row">
             <!-- COLONNE GAUCHE : FORMULAIRE -->
@@ -160,28 +161,40 @@
                         Nous vous répondrons dans les meilleurs délais.
                     </h3>
                 </div>
-                <form action="https://formspree.io/f/mnpababp" method="POST">
+
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Clé d'accès Web3Forms -->
+                    <input type="hidden" name="access_key" value="e07b238c-5154-44f9-a58d-fc019385cab3">
+                    <!-- Objet de l'email reçu -->
+                    <input type="hidden" name="subject" value="Nouveau message depuis le site Inteliconnect Africa">
+                    <!-- Format de l'email en tableau lisible -->
+                    <input type="hidden" name="from_name" value="Formulaire de contact - Inteliconnect Africa">
+                    <!-- Piège anti-spam invisible -->
+                    <input type="checkbox" name="botcheck" class="d-none" style="display:none">
+
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <input class="form-control"
                                    type="text"
-                                   name="nom"
-                                   placeholder="Nom complet"
+                                   name="nom_complet"
+                                   placeholder="Nom et prénom"
                                    required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <input class="form-control"
-                                   type="email"
-                                   name="email"
-                                   placeholder="Adresse e-mail"
+                                   type="tel"
+                                   name="telephone"
+                                   placeholder="Numéro de téléphone"
+                                   pattern="[0-9+ ]{6,20}"
                                    required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <input class="form-control"
-                               type="text"
-                               name="sujet"
-                               placeholder="Sujet">
+                               type="email"
+                               name="email"
+                               placeholder="Adresse e-mail"
+                               required>
                     </div>
                     <div class="mb-3">
                         <textarea class="form-control"
@@ -190,115 +203,64 @@
                                   placeholder="Votre message"
                                   required></textarea>
                     </div>
-                    <!-- Optionnel : redirige vers une page de remerciement après envoi -->
-                    <input type="hidden" name="_next" value="https://tonsite.com/merci.html">
-                    <!-- Empêche le spam via un champ piège invisible -->
-                    <input type="text" name="_gotcha" style="display:none">
+
+                    <!-- Zone de statut (succès / erreur) -->
+                    <div id="formStatus" class="mb-3" style="display:none;"></div>
 
                     <div class="text-start">
-                        <button class="btn btn-primary btn-xl text-uppercase"
-                                type="submit">
+                        <button class="btn btn-primary btn-xl text-uppercase" type="submit" id="submitBtn">
                             Envoyer le message
                         </button>
                     </div>
                 </form>
             </div>
+
             <!-- COLONNE DROITE : ESPACE DISPONIBLE -->
-            <div class="col-lg-6">
-            </div>
+            <div class="col-lg-6"></div>
         </div>
     </div>
 </section>
-    
-<!-- <section class="page-section" id="contact">
-    <div class="container">
 
-        <div class="row">
+<script>
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-            COLONNE GAUCHE : FORMULAIRE 
-            <div class="col-lg-6">
+    const form = e.target;
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('formStatus');
+    const formData = new FormData(form);
 
-                <div class="text-start">
-                    <h2 class="section-heading text-uppercase">
-                        Envoyez-nous un message
-                    </h2>
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours...';
 
-                    <h3 class="section-subheading text-muted">
-                        Nous vous répondrons dans les meilleurs délais.
-                    </h3>
-                </div>
-
-                <form>
-
-                    <div class="row">
-
-                        <div class="col-md-6 mb-3">
-                            <input class="form-control"
-                                   type="text"
-                                   placeholder="Nom complet">
-                        </div>
-
-                        <div class="col-md-6 mb-3">
-                            <input class="form-control"
-                                   type="email"
-                                   placeholder="Adresse e-mail">
-                        </div>
-
-                    </div>
-
-                    <div class="mb-3">
-                        <input class="form-control"
-                               type="text"
-                               placeholder="Sujet">
-                    </div>
-
-                    <div class="mb-3">
-                        <textarea class="form-control"
-                                  rows="8"
-                                  placeholder="Votre message"></textarea>
-                    </div>
-
-                    <div class="text-start">
-                        <button class="btn btn-primary btn-xl text-uppercase"
-                                type="submit">
-                            Envoyer le message
-                        </button>
-                    </div>
-
-                </form>
-
-            </div>
-
-
-        
-            <div class="col-lg-6">
-
-            </div>
-
-        </div> 
-
-    </div>
-</section>  -->
-
-    <!-- Carte
-    <section class="page-section">
-        <div class="container">
-
-            <div class="text-center mb-5">
-                <h2 class="section-heading text-uppercase">Notre Localisation</h2>
-            </div>
-
-            <!--<div class="map-placeholder">
-                <i class="fas fa-map-location-dot fa-3x mb-3"></i>
-                <h4>Bujumbura - Burundi</h4>
-                <p>
-                    Vous pouvez intégrer ici votre carte Google Maps
-                    ou OpenStreetMap.
-                </p>
-            </div> 
-
-        </div>
-    </section> -->
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(data => {
+        status.style.display = 'block';
+        if (data.success) {
+            status.className = 'alert alert-success';
+            status.textContent = 'Votre message a bien été envoyé. Merci de nous avoir contactés !';
+            form.reset();
+        } else {
+            status.className = 'alert alert-danger';
+            status.textContent = "Une erreur s'est produite. Merci de réessayer ou de nous écrire directement à info@inteliconnectafrica.com.";
+        }
+    })
+    .catch(() => {
+        status.style.display = 'block';
+        status.className = 'alert alert-danger';
+        status.textContent = "Impossible d'envoyer le message. Vérifiez votre connexion et réessayez.";
+    })
+    .finally(() => {
+        btn.disabled = false;
+        btn.textContent = 'Envoyer le message';
+    });
+});
+</script>    
 
     <!-- Footer -->
 <footer class="footer py-4">
