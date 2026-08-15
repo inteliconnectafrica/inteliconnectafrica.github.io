@@ -111,7 +111,7 @@
                         </div>
                         <h4>Adresse</h4>
                         <p>
-                            Bujumbura et Bruxelle<br>
+                            Bujumbura / Bruxelle<br>
                             République du Burundi / Belgique
                         </p>
                     </div>
@@ -136,8 +136,8 @@
                         </div>
                         <h4>Téléphone</h4>
                         <p>
-                            +257 79 977 275<br>
-                            +257 62 573 985
+                            +1(873) 561-8970<br> (+257) 71 17 60 70 <br>
+                            (+257) 62 573 985
                         </p>
                     </div>
                 </div>
@@ -147,13 +147,75 @@
     </section>
 
     <!-- Formulaire -->
+    <section class="page-section" id="contact">
+    <div class="container">
+        <div class="row">
+            <!-- COLONNE GAUCHE : FORMULAIRE -->
+            <div class="col-lg-6">
+                <div class="text-start">
+                    <h2 class="section-heading text-uppercase">
+                        Envoyez-nous un message
+                    </h2>
+                    <h3 class="section-subheading text-muted">
+                        Nous vous répondrons dans les meilleurs délais.
+                    </h3>
+                </div>
+                <form action="https://formspree.io/f/mnpababp" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input class="form-control"
+                                   type="text"
+                                   name="nom"
+                                   placeholder="Nom complet"
+                                   required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input class="form-control"
+                                   type="email"
+                                   name="email"
+                                   placeholder="Adresse e-mail"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control"
+                               type="text"
+                               name="sujet"
+                               placeholder="Sujet">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control"
+                                  name="message"
+                                  rows="8"
+                                  placeholder="Votre message"
+                                  required></textarea>
+                    </div>
+                    <!-- Optionnel : redirige vers une page de remerciement après envoi -->
+                    <input type="hidden" name="_next" value="https://tonsite.com/merci.html">
+                    <!-- Empêche le spam via un champ piège invisible -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <div class="text-start">
+                        <button class="btn btn-primary btn-xl text-uppercase"
+                                type="submit">
+                            Envoyer le message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- COLONNE DROITE : ESPACE DISPONIBLE -->
+            <div class="col-lg-6">
+            </div>
+        </div>
+    </div>
+</section>
     
-<section class="page-section" id="contact">
+<!-- <section class="page-section" id="contact">
     <div class="container">
 
         <div class="row">
 
-            <!-- COLONNE GAUCHE : FORMULAIRE -->
+            COLONNE GAUCHE : FORMULAIRE 
             <div class="col-lg-6">
 
                 <div class="text-start">
@@ -208,15 +270,15 @@
             </div>
 
 
-            <!-- COLONNE DROITE : ESPACE DISPONIBLE -->
+        
             <div class="col-lg-6">
 
             </div>
 
-        </div>
+        </div> 
 
     </div>
-</section>
+</section>  -->
 
     <!-- Carte
     <section class="page-section">
