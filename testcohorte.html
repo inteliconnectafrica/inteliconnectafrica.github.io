@@ -6,17 +6,17 @@
      bien 49 éléments, pas 48).
      À FAIRE avant publication : remplacer chaque href="...." par
      le vrai lien du test correspondant sur Moodle.
-     PRÉREQUIS : cette section utilise les classes Bootstrap 5
-     (container, row, col-*, g-4) — assure-toi que le CSS/JS de
-     Bootstrap 5 est bien chargé sur cette page.
+     Cette section est autonome (grille en CSS pur) : elle
+     fonctionne que ta page charge Bootstrap ou non, aucun
+     conflit possible avec les classes .row/.col de Bootstrap.
      ========================================================= -->
 
 <section id="tests-competence" class="ica-tests-section">
 
-    <div class="container">
+    <div class="ica-container">
 
         <!-- En-tête -->
-        <div class="text-center mb-5">
+        <div class="ica-header-block">
             <span class="ica-badge">INTELICONNECT AFRICA</span>
 
             <h1 class="ica-main-title">
@@ -31,7 +31,7 @@
                     Tu as <strong>48 heures ouvrables</strong> pour passer ton Test,
                     mais chaque Test ne compte que <strong>90 minutes avec compte à rebours</strong>.
                 </p>
-                <p class="mb-0">
+                <p class="ica-no-margin">
                     <strong>Choisis soigneusement le test correspondant à ton domaine
                     de compétence.</strong>
                 </p>
@@ -52,9 +52,9 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">🚨</div>
                         <h3>Gestion des incidents</h3>
@@ -63,7 +63,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">☁️</div>
                         <h3>Sécurité Cloud</h3>
@@ -72,7 +72,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">🌐</div>
                         <h3>Sécurité Réseau</h3>
@@ -81,7 +81,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">💻</div>
                         <h3>Ethical Hacking</h3>
@@ -107,9 +107,9 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">🏢</div>
                         <h3>IA pour les entreprises</h3>
@@ -118,7 +118,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">✨</div>
                         <h3>IA Générative</h3>
@@ -127,7 +127,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">💬</div>
                         <h3>ChatGPT Professionnel</h3>
@@ -136,7 +136,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">🧠</div>
                         <h3>Fondamentaux de l'IA</h3>
@@ -145,7 +145,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">📝</div>
                         <h3>Prompt Engineering</h3>
@@ -171,9 +171,9 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">📄</div>
                         <h3>Word</h3>
@@ -182,7 +182,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">📊</div>
                         <h3>Excel</h3>
@@ -191,7 +191,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">☁️</div>
                         <h3>Google Workspace</h3>
@@ -217,9 +217,9 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">🎯</div>
                         <h3>Connaissances techniques et stratégiques du plaidoyer</h3>
@@ -228,7 +228,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">🤝</div>
                         <h3>Compétences techniques et de communication</h3>
@@ -237,7 +237,7 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                <div class="ica-col">
                     <a href="...." class="ica-course-card">
                         <div class="ica-card-icon">📈</div>
                         <h3>Mise en œuvre, suivi et leadership</h3>
@@ -263,17 +263,17 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">📋</div><h3>Audit interne</h3><p>Évalue tes connaissances en contrôle, assurance, risques et amélioration des processus internes.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">📋</div><h3>Audit interne</h3><p>Évalue tes connaissances en contrôle, assurance, risques et amélioration des processus internes.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🔍</div><h3>Audit externe</h3><p>Teste tes connaissances des principes, procédures et missions de l'audit externe.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🔍</div><h3>Audit externe</h3><p>Teste tes connaissances des principes, procédures et missions de l'audit externe.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">⭐</div><h3>Audit qualité</h3><p>Évalue ta compréhension des systèmes de management et des processus d'audit qualité.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">⭐</div><h3>Audit qualité</h3><p>Évalue ta compréhension des systèmes de management et des processus d'audit qualité.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">💻</div><h3>Audit informatique</h3><p>Teste tes compétences en contrôle, sécurité et évaluation des systèmes d'information.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">💻</div><h3>Audit informatique</h3><p>Teste tes compétences en contrôle, sécurité et évaluation des systèmes d'information.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">💰</div><h3>Audit financier</h3><p>Évalue tes connaissances en contrôle des informations financières, risques et procédures d'audit.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">💰</div><h3>Audit financier</h3><p>Évalue tes connaissances en contrôle des informations financières, risques et procédures d'audit.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -292,15 +292,15 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🗄️</div><h3>Archivage</h3><p>Teste tes connaissances sur la conservation, le classement et la gestion des archives.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🗄️</div><h3>Archivage</h3><p>Teste tes connaissances sur la conservation, le classement et la gestion des archives.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">📂</div><h3>Gestion documentaire</h3><p>Évalue ta capacité à organiser, contrôler et sécuriser les documents professionnels.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">📂</div><h3>Gestion documentaire</h3><p>Évalue ta capacité à organiser, contrôler et sécuriser les documents professionnels.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🚚</div><h3>Gestion logistique</h3><p>Teste tes compétences en planification, approvisionnement, stocks et flux logistiques.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🚚</div><h3>Gestion logistique</h3><p>Teste tes compétences en planification, approvisionnement, stocks et flux logistiques.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">✅</div><h3>Gestion de la qualité</h3><p>Évalue ta maîtrise des principes, outils et démarches d'amélioration de la qualité.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">✅</div><h3>Gestion de la qualité</h3><p>Évalue ta maîtrise des principes, outils et démarches d'amélioration de la qualité.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -319,15 +319,15 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">📊</div><h3>Gestion des projets communautaires</h3><p>Teste tes compétences en planification, mise en œuvre et suivi des projets communautaires.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">📊</div><h3>Gestion des projets communautaires</h3><p>Teste tes compétences en planification, mise en œuvre et suivi des projets communautaires.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🏘️</div><h3>Développement local</h3><p>Évalue ta compréhension des approches et stratégies de développement territorial et local.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🏘️</div><h3>Développement local</h3><p>Évalue ta compréhension des approches et stratégies de développement territorial et local.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">👥</div><h3>Mobilisation communautaire</h3><p>Teste tes compétences en participation citoyenne, mobilisation et engagement communautaire.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">👥</div><h3>Mobilisation communautaire</h3><p>Teste tes compétences en participation citoyenne, mobilisation et engagement communautaire.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🏛️</div><h3>Gestion des ONG</h3><p>Évalue tes connaissances en organisation, administration, projets et fonctionnement des ONG.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🏛️</div><h3>Gestion des ONG</h3><p>Évalue tes connaissances en organisation, administration, projets et fonctionnement des ONG.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -346,13 +346,13 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🩺</div><h3>Informatique médicale de base</h3><p>Teste tes connaissances fondamentales sur l'utilisation de l'informatique dans le domaine médical.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🩺</div><h3>Informatique médicale de base</h3><p>Teste tes connaissances fondamentales sur l'utilisation de l'informatique dans le domaine médical.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">📱</div><h3>Télémédecine</h3><p>Évalue ta compréhension des principes, outils et usages de la télémédecine.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">📱</div><h3>Télémédecine</h3><p>Évalue ta compréhension des principes, outils et usages de la télémédecine.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">💙</div><h3>Santé numérique</h3><p>Teste tes connaissances sur les technologies numériques et leur utilisation dans les systèmes de santé.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">💙</div><h3>Santé numérique</h3><p>Teste tes connaissances sur les technologies numériques et leur utilisation dans les systèmes de santé.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -371,17 +371,17 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🎤</div><h3>Prise de parole en public</h3><p>Évalue tes capacités à présenter, argumenter et communiquer efficacement devant un public.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🎤</div><h3>Prise de parole en public</h3><p>Évalue tes capacités à présenter, argumenter et communiquer efficacement devant un public.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">✍️</div><h3>Rédaction administrative</h3><p>Teste tes compétences dans la rédaction de courriers, notes, rapports et documents administratifs.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">✍️</div><h3>Rédaction administrative</h3><p>Teste tes compétences dans la rédaction de courriers, notes, rapports et documents administratifs.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">💬</div><h3>Communication professionnelle</h3><p>Évalue ta capacité à communiquer efficacement dans différents contextes professionnels.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">💬</div><h3>Communication professionnelle</h3><p>Évalue ta capacité à communiquer efficacement dans différents contextes professionnels.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🇫🇷</div><h3>Français professionnel</h3><p>Teste ta maîtrise du français appliqué aux situations de travail et de communication professionnelle.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🇫🇷</div><h3>Français professionnel</h3><p>Teste ta maîtrise du français appliqué aux situations de travail et de communication professionnelle.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🇬🇧</div><h3>Anglais professionnel</h3><p>Évalue tes compétences en anglais utilisé dans les échanges et situations professionnelles.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🇬🇧</div><h3>Anglais professionnel</h3><p>Évalue tes compétences en anglais utilisé dans les échanges et situations professionnelles.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -400,13 +400,13 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🔌</div><h3>Électronique</h3><p>Teste tes connaissances sur les composants, circuits et principes fondamentaux de l'électronique.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🔌</div><h3>Électronique</h3><p>Teste tes connaissances sur les composants, circuits et principes fondamentaux de l'électronique.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">⚡</div><h3>Électricité</h3><p>Évalue ta compréhension des grandeurs électriques, circuits, installations et règles fondamentales.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">⚡</div><h3>Électricité</h3><p>Évalue ta compréhension des grandeurs électriques, circuits, installations et règles fondamentales.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">☀️</div><h3>Énergie renouvelable</h3><p>Teste tes connaissances sur les principales sources d'énergie renouvelable et leurs applications.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">☀️</div><h3>Énergie renouvelable</h3><p>Teste tes connaissances sur les principales sources d'énergie renouvelable et leurs applications.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -425,13 +425,13 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">📊</div><h3>STATA</h3><p>Évalue tes compétences de base dans l'utilisation de STATA pour l'analyse et le traitement des données.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">📊</div><h3>STATA</h3><p>Évalue tes compétences de base dans l'utilisation de STATA pour l'analyse et le traitement des données.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">📉</div><h3>SPSS</h3><p>Teste ta maîtrise des fonctions essentielles de SPSS pour la saisie, l'analyse et l'interprétation des données.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">📉</div><h3>SPSS</h3><p>Teste ta maîtrise des fonctions essentielles de SPSS pour la saisie, l'analyse et l'interprétation des données.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🎲</div><h3>Échantillonnage</h3><p>Évalue tes connaissances des méthodes d'échantillonnage et de sélection d'un échantillon statistique.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🎲</div><h3>Échantillonnage</h3><p>Évalue tes connaissances des méthodes d'échantillonnage et de sélection d'un échantillon statistique.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -450,15 +450,15 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">📘</div><h3>Business Plan</h3><p>Teste tes compétences dans la conception, la structuration et l'analyse d'un business plan.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">📘</div><h3>Business Plan</h3><p>Teste tes compétences dans la conception, la structuration et l'analyse d'un business plan.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🏗️</div><h3>Création des entreprises</h3><p>Évalue tes connaissances sur les étapes, ressources et stratégies nécessaires à la création d'une entreprise.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🏗️</div><h3>Création des entreprises</h3><p>Évalue tes connaissances sur les étapes, ressources et stratégies nécessaires à la création d'une entreprise.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">💡</div><h3>Gestion des PME & Innovation</h3><p>Teste tes compétences en gestion des PME, croissance, innovation et adaptation au marché.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">💡</div><h3>Gestion des PME & Innovation</h3><p>Teste tes compétences en gestion des PME, croissance, innovation et adaptation au marché.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🛒</div><h3>E-commerce</h3><p>Évalue ta compréhension des modèles, outils et stratégies du commerce électronique.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🛒</div><h3>E-commerce</h3><p>Évalue ta compréhension des modèles, outils et stratégies du commerce électronique.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -477,13 +477,13 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="ica-row">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🌍</div><h3>Changement climatique</h3><p>Teste tes connaissances sur les causes, impacts et enjeux liés au changement climatique.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🌍</div><h3>Changement climatique</h3><p>Teste tes connaissances sur les causes, impacts et enjeux liés au changement climatique.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🌦️</div><h3>Adaptation climatique</h3><p>Évalue ta compréhension des stratégies permettant de réduire la vulnérabilité face aux changements climatiques.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🌦️</div><h3>Adaptation climatique</h3><p>Évalue ta compréhension des stratégies permettant de réduire la vulnérabilité face aux changements climatiques.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg"><a href="...." class="ica-course-card"><div class="ica-card-icon">🌿</div><h3>Résilience climatique</h3><p>Teste tes connaissances sur les approches permettant aux communautés et organisations de faire face aux risques climatiques.</p><span class="ica-card-link">Passer le test →</span></a></div>
+                <div class="ica-col"><a href="...." class="ica-course-card"><div class="ica-card-icon">🌿</div><h3>Résilience climatique</h3><p>Teste tes connaissances sur les approches permettant aux communautés et organisations de faire face aux risques climatiques.</p><span class="ica-card-link">Passer le test →</span></a></div>
 
             </div>
         </div>
@@ -660,6 +660,59 @@
 }
 
 /* =========================================================
+   CONTENEUR ET GRILLE — 100% CSS, sans dépendance à Bootstrap.
+   Fonctionne donc dans n'importe quelle page, avec ou sans
+   Bootstrap chargé.
+   ========================================================= */
+
+.ica-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.ica-header-block {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ica-no-margin {
+    margin-bottom: 0 !important;
+}
+
+.ica-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.ica-col {
+    box-sizing: border-box;
+    /* mobile : 1 carte par ligne */
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+/* tablette (≥576px) : 2 cartes par ligne */
+@media (min-width: 576px) {
+    .ica-col {
+        flex: 1 1 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+}
+
+/* tablette large (≥768px) : 3 cartes par ligne */
+@media (min-width: 768px) {
+    .ica-col {
+        flex: 1 1 calc(33.333% - 16px);
+        max-width: calc(33.333% - 16px);
+    }
+}
+
+/* =========================================================
    5 cartes par ligne sur grand écran, à l'intérieur de
    chaque catégorie. Les catégories qui n'ont pas un multiple
    de 5 cours (3 ou 4) laisseront un espace vide en fin de
@@ -667,9 +720,9 @@
    ========================================================= */
 
 @media (min-width: 992px) {
-    .ica-category .col-lg {
-        flex: 0 0 20%;
-        max-width: 20%;
+    .ica-col {
+        flex: 1 1 calc(20% - 19.2px);
+        max-width: calc(20% - 19.2px);
     }
 }
 
