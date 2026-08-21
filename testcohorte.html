@@ -10,7 +10,296 @@
      fonctionne que ta page charge Bootstrap ou non, aucun
      conflit possible avec les classes .row/.col de Bootstrap.
      ========================================================= -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Certification | Intelliconnect Africa</title>
 
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" />
+<style>
+
+/* =========================================================
+   INTELICONNECT AFRICA - TESTS DE COMPÉTENCE
+   ========================================================= */
+
+.ica-tests-section {
+    padding: 70px 0;
+    background: #f5f8fc;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+}
+
+.ica-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 18px;
+    border-radius: 50px;
+    background: #e8f0ff;
+    color: #1557b0;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.ica-main-title {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 800;
+    color: #102a56;
+}
+
+.ica-warning-box {
+    max-width: 950px;
+    margin: 0 auto 60px;
+    padding: 25px 30px;
+    border-left: 6px solid #f0a500;
+    border-radius: 12px;
+    background: #fff8e6;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    text-align: left;
+}
+
+.ica-warning-box h3 {
+    margin-bottom: 12px;
+    color: #8a5a00;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.ica-warning-box p {
+    margin-bottom: 8px;
+    color: #594d35;
+    line-height: 1.7;
+}
+
+.ica-category {
+    margin-bottom: 65px;
+}
+
+.ica-category-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.ica-category-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #102a56;
+    font-size: 28px;
+}
+
+.ica-category-header h2 {
+    margin: 0 0 5px;
+    color: #102a56;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.ica-category-header p {
+    margin: 0;
+    color: #667085;
+    font-size: 15px;
+}
+
+.ica-course-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 285px;
+    padding: 25px 21px;
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 18px;
+    text-decoration: none !important;
+    color: inherit !important;
+    box-shadow: 0 5px 18px rgba(16, 42, 86, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.ica-course-card:hover,
+.ica-course-card:focus-visible {
+    transform: translateY(-8px);
+    border-color: #2878e8;
+    box-shadow: 0 15px 35px rgba(16, 42, 86, 0.14);
+}
+
+.ica-course-card:focus-visible {
+    outline: 3px solid #2878e8;
+    outline-offset: 3px;
+}
+
+.ica-card-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    background: #edf4ff;
+    font-size: 25px;
+}
+
+.ica-course-card h3 {
+    margin: 0 0 12px;
+    color: #102a56;
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 750;
+}
+
+.ica-course-card p {
+    flex-grow: 1;
+    margin: 0 0 20px;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.ica-card-link {
+    display: inline-flex;
+    align-items: center;
+    color: #1769d2;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.ica-course-card:hover .ica-card-link {
+    color: #0b4fa8;
+}
+
+/* =========================================================
+   CONTENEUR ET GRILLE — 100% CSS, sans dépendance à Bootstrap.
+   Fonctionne donc dans n'importe quelle page, avec ou sans
+   Bootstrap chargé.
+   ========================================================= */
+
+.ica-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.ica-header-block {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ica-no-margin {
+    margin-bottom: 0 !important;
+}
+
+.ica-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.ica-col {
+    box-sizing: border-box;
+    /* mobile : 1 carte par ligne */
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+/* tablette (≥576px) : 2 cartes par ligne */
+@media (min-width: 576px) {
+    .ica-col {
+        flex: 1 1 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+}
+
+/* tablette large (≥768px) : 3 cartes par ligne */
+@media (min-width: 768px) {
+    .ica-col {
+        flex: 1 1 calc(33.333% - 16px);
+        max-width: calc(33.333% - 16px);
+    }
+}
+
+/* =========================================================
+   5 cartes par ligne sur grand écran, à l'intérieur de
+   chaque catégorie. Les catégories qui n'ont pas un multiple
+   de 5 cours (3 ou 4) laisseront un espace vide en fin de
+   ligne — c'est normal avec un regroupement par catégorie.
+   ========================================================= */
+
+@media (min-width: 992px) {
+    .ica-col {
+        flex: 1 1 calc(20% - 19.2px);
+        max-width: calc(20% - 19.2px);
+    }
+}
+
+@media (max-width: 991px) {
+    .ica-tests-section {
+        padding: 50px 0;
+    }
+    .ica-course-card {
+        min-height: 270px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ica-tests-section {
+        padding: 40px 12px;
+    }
+    .ica-main-title {
+        font-size: 29px;
+    }
+    .ica-warning-box {
+        padding: 20px;
+    }
+    .ica-category-header {
+        align-items: flex-start;
+    }
+    .ica-category-header h2 {
+        font-size: 23px;
+    }
+    .ica-category-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 22px;
+    }
+    .ica-course-card {
+        min-height: 250px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+     
 <section id="tests-competence" class="ica-tests-section">
 
     <div class="ica-container">
@@ -490,276 +779,6 @@
 
     </div>
 </section>
+</body>
+</html>
 
-
-<style>
-
-/* =========================================================
-   INTELICONNECT AFRICA - TESTS DE COMPÉTENCE
-   ========================================================= */
-
-.ica-tests-section {
-    padding: 70px 0;
-    background: #f5f8fc;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #172033;
-}
-
-.ica-badge {
-    display: inline-block;
-    padding: 8px 18px;
-    margin-bottom: 18px;
-    border-radius: 50px;
-    background: #e8f0ff;
-    color: #1557b0;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.ica-main-title {
-    max-width: 1000px;
-    margin: 0 auto 30px;
-    font-size: clamp(28px, 4vw, 48px);
-    line-height: 1.15;
-    font-weight: 800;
-    color: #102a56;
-}
-
-.ica-warning-box {
-    max-width: 950px;
-    margin: 0 auto 60px;
-    padding: 25px 30px;
-    border-left: 6px solid #f0a500;
-    border-radius: 12px;
-    background: #fff8e6;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    text-align: left;
-}
-
-.ica-warning-box h3 {
-    margin-bottom: 12px;
-    color: #8a5a00;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.ica-warning-box p {
-    margin-bottom: 8px;
-    color: #594d35;
-    line-height: 1.7;
-}
-
-.ica-category {
-    margin-bottom: 65px;
-}
-
-.ica-category-header {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 28px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #e2e8f0;
-}
-
-.ica-category-icon {
-    width: 58px;
-    height: 58px;
-    min-width: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background: #102a56;
-    font-size: 28px;
-}
-
-.ica-category-header h2 {
-    margin: 0 0 5px;
-    color: #102a56;
-    font-size: 27px;
-    font-weight: 800;
-}
-
-.ica-category-header p {
-    margin: 0;
-    color: #667085;
-    font-size: 15px;
-}
-
-.ica-course-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 285px;
-    padding: 25px 21px;
-    background: #ffffff;
-    border: 1px solid #e5eaf0;
-    border-radius: 18px;
-    text-decoration: none !important;
-    color: inherit !important;
-    box-shadow: 0 5px 18px rgba(16, 42, 86, 0.06);
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.ica-course-card:hover,
-.ica-course-card:focus-visible {
-    transform: translateY(-8px);
-    border-color: #2878e8;
-    box-shadow: 0 15px 35px rgba(16, 42, 86, 0.14);
-}
-
-.ica-course-card:focus-visible {
-    outline: 3px solid #2878e8;
-    outline-offset: 3px;
-}
-
-.ica-card-icon {
-    width: 52px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-    border-radius: 14px;
-    background: #edf4ff;
-    font-size: 25px;
-}
-
-.ica-course-card h3 {
-    margin: 0 0 12px;
-    color: #102a56;
-    font-size: 19px;
-    line-height: 1.3;
-    font-weight: 750;
-}
-
-.ica-course-card p {
-    flex-grow: 1;
-    margin: 0 0 20px;
-    color: #667085;
-    font-size: 14px;
-    line-height: 1.65;
-}
-
-.ica-card-link {
-    display: inline-flex;
-    align-items: center;
-    color: #1769d2;
-    font-size: 14px;
-    font-weight: 800;
-}
-
-.ica-course-card:hover .ica-card-link {
-    color: #0b4fa8;
-}
-
-/* =========================================================
-   CONTENEUR ET GRILLE — 100% CSS, sans dépendance à Bootstrap.
-   Fonctionne donc dans n'importe quelle page, avec ou sans
-   Bootstrap chargé.
-   ========================================================= */
-
-.ica-container {
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.ica-header-block {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.ica-no-margin {
-    margin-bottom: 0 !important;
-}
-
-.ica-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-bottom: 0;
-}
-
-.ica-col {
-    box-sizing: border-box;
-    /* mobile : 1 carte par ligne */
-    flex: 1 1 100%;
-    max-width: 100%;
-}
-
-/* tablette (≥576px) : 2 cartes par ligne */
-@media (min-width: 576px) {
-    .ica-col {
-        flex: 1 1 calc(50% - 12px);
-        max-width: calc(50% - 12px);
-    }
-}
-
-/* tablette large (≥768px) : 3 cartes par ligne */
-@media (min-width: 768px) {
-    .ica-col {
-        flex: 1 1 calc(33.333% - 16px);
-        max-width: calc(33.333% - 16px);
-    }
-}
-
-/* =========================================================
-   5 cartes par ligne sur grand écran, à l'intérieur de
-   chaque catégorie. Les catégories qui n'ont pas un multiple
-   de 5 cours (3 ou 4) laisseront un espace vide en fin de
-   ligne — c'est normal avec un regroupement par catégorie.
-   ========================================================= */
-
-@media (min-width: 992px) {
-    .ica-col {
-        flex: 1 1 calc(20% - 19.2px);
-        max-width: calc(20% - 19.2px);
-    }
-}
-
-@media (max-width: 991px) {
-    .ica-tests-section {
-        padding: 50px 0;
-    }
-    .ica-course-card {
-        min-height: 270px;
-    }
-}
-
-@media (max-width: 575px) {
-    .ica-tests-section {
-        padding: 40px 12px;
-    }
-    .ica-main-title {
-        font-size: 29px;
-    }
-    .ica-warning-box {
-        padding: 20px;
-    }
-    .ica-category-header {
-        align-items: flex-start;
-    }
-    .ica-category-header h2 {
-        font-size: 23px;
-    }
-    .ica-category-icon {
-        width: 48px;
-        height: 48px;
-        min-width: 48px;
-        font-size: 22px;
-    }
-    .ica-course-card {
-        min-height: 250px;
-    }
-}
-
-</style>
