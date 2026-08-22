@@ -49,7 +49,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="index.html#page-top">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#page-top">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">A propos de nous</a></li>
                         <li class="nav-item"><a class="nav-link" href="certificationtest.html">Test de Certification</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -81,14 +81,18 @@
                         </div>
 
                         <!-- * * * * * * * * * * * * * * * * * * * * * * * *-->
-                        <!-- * * Formulaire connecté à Formspree * *-->
+                        <!-- * * Formulaire connecté à Web3Forms * *-->
                         <!-- * * * * * * * * * * * * * * * * * * * * * * * *-->
-                        <!-- Remplacez XXXXXXX ci-dessous par votre propre ID Formspree-->
-                        <!-- (créez un formulaire gratuit sur https://formspree.io et configurez-->
-                        <!-- l'adresse de destination inteliconnectafrica@gmail.com dans votre tableau de bord)-->
-                        <form id="inscriptionForm" action="https://formspree.io/f/XXXXXXX" method="POST">
+                        <!-- Même service et même clé d'accès que le formulaire de contact.html -->
+                        <form id="inscriptionForm" action="https://api.web3forms.com/submit" method="POST">
+                            <!-- Clé d'accès Web3Forms -->
+                            <input type="hidden" name="access_key" value="e07b238c-5154-44f9-a58d-fc019385cab3">
                             <!-- Objet de l'email reçu -->
-                            <input type="hidden" name="_subject" value="Nouvelle inscription - Inteliconnect Africa" />
+                            <input type="hidden" name="subject" value="Nouvelle inscription - Inteliconnect Africa">
+                            <!-- Format de l'email en tableau lisible -->
+                            <input type="hidden" name="from_name" value="Formulaire d'inscription - Inteliconnect Africa">
+                            <!-- Piège anti-spam invisible -->
+                            <input type="checkbox" name="botcheck" class="d-none" style="display:none">
 
                             <div class="row">
                                 <div class="col-md-6">
@@ -119,7 +123,7 @@
                                     <div class="form-group">
                                         <label for="telephone" class="form-label">Téléphone <span class="required-mark">*</span></label>
                                         <input class="form-control" id="telephone" name="telephone" type="tel" placeholder="+257 XX XX XX XX" required />
-                                        <p class="field-hint">Ex : +257 79 123 456</p>
+                                        <p class="field-hint">Ex : +257 79 xxx 456</p>
                                     </div>
                                 </div>
                             </div>
@@ -190,7 +194,7 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
 
-        <!-- Envoi AJAX du formulaire vers Formspree (reste sur la page, sans rechargement) -->
+        <!-- Envoi AJAX du formulaire vers Web3Forms (reste sur la page, sans rechargement) -->
         <script>
             const form = document.getElementById('inscriptionForm');
             const submitButton = document.getElementById('submitButton');
@@ -209,8 +213,9 @@
                     body: new FormData(form),
                     headers: { 'Accept': 'application/json' }
                 })
-                    .then((response) => {
-                        if (response.ok) {
+                    .then((response) => response.json())
+                    .then((data) => {
+                        if (data.success) {
                             successMsg.classList.remove('d-none');
                             form.reset();
                             document.getElementById('autrePrecision').style.display = 'none';
@@ -229,4 +234,3 @@
         </script>
     </body>
 </html>
-
