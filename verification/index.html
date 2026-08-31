@@ -1,1 +1,482 @@
-verification
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Vérification de certificat | Inteliconnect Africa</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy: #102a56;
+    --navy-soft: #4a5b7d;
+    --muted: #8a93a6;
+    --gold: #a9782f;
+    --gold-soft: #c9a463;
+    --green: #1c6b41;
+    --green-dark: #144e30;
+    --hairline: #dcdfe6;
+    --paper: #ffffff;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--navy);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12vh 20px 10vh;
+  }
+
+  /* ---------- Bilingual caption pattern ----------
+     Every French label/word is followed by a smaller,
+     muted English line so English-speaking users can
+     follow the page and the result table without
+     ambiguity. */
+  .en{
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+  }
+
+  .brand{
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin: 0 0 6px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h1{
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    line-height: 1.2;
+    margin: 0 0 4px;
+    text-align: center;
+    color: var(--navy);
+  }
+
+  h1 .en{
+    font-size: 0.95rem;
+    margin-top: 6px;
+  }
+
+  .subtitle{
+    font-size: 0.98rem;
+    color: var(--navy-soft);
+    text-align: center;
+    max-width: 440px;
+    margin: 0 0 46px;
+    line-height: 1.6;
+  }
+
+  .subtitle .en{
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .search-block{
+    width: 100%;
+    max-width: 440px;
+  }
+
+  label{
+    display: block;
+    font-size: 0.8rem;
+    color: var(--navy-soft);
+    margin-bottom: 8px;
+    letter-spacing: 0.01em;
+  }
+
+  label .en{
+    font-size: 0.72rem;
+    margin-top: 2px;
+  }
+
+  #certId{
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--navy);
+    background: var(--paper);
+    border: none;
+    border-bottom: 1.5px solid var(--hairline);
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+
+  #certId::placeholder{ color: #a7afc2; }
+
+  #certId:focus{ border-bottom-color: var(--gold); }
+
+  .actions{
+    margin-top: 26px;
+    display: flex;
+    gap: 14px;
+  }
+
+  button{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    padding: 12px 30px;
+    letter-spacing: 0.01em;
+    transition: background 0.2s ease, transform 0.15s ease;
+    line-height: 1.3;
+  }
+
+  button .en{
+    font-size: 0.68rem;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  #verifyBtn{
+    background: var(--green);
+    color: #ffffff;
+    flex: 1;
+  }
+
+  #verifyBtn .en{ color: rgba(255,255,255,0.75); }
+
+  #verifyBtn:hover{ background: var(--green-dark); }
+
+  #verifyBtn:active{ transform: translateY(1px); }
+
+  #cancelBtn{
+    background: transparent;
+    color: var(--navy-soft);
+    border: 1.5px solid var(--hairline);
+  }
+
+  #cancelBtn .en{ color: var(--muted); }
+
+  #cancelBtn:hover{
+    border-color: var(--navy-soft);
+    color: var(--navy);
+  }
+
+  .error-msg{
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #a3372f;
+    display: none;
+    line-height: 1.5;
+  }
+
+  .error-msg .en{
+    font-size: 0.76rem;
+    color: #c07a74;
+    margin-top: 3px;
+  }
+
+  /* ---------- Result panel ---------- */
+
+  #resultPanel{
+    width: 100%;
+    max-width: 700px;
+    margin-top: 64px;
+    display: none;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  #resultPanel.show{
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .result-heading{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .result-heading .eyebrow{
+    display: inline-block;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+
+  .result-heading .eyebrow .en{
+    font-size: 0.68rem;
+    font-style: normal;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .result-heading h2{
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+    margin: 0;
+    color: var(--navy);
+  }
+
+  .result-heading h2 .en{
+    font-size: 0.82rem;
+    margin-top: 5px;
+  }
+
+  table.cert-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.96rem;
+  }
+
+  table.cert-table thead th{
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--navy-soft);
+    padding: 0 14px 12px 0;
+    border-bottom: 1.5px solid var(--navy);
+    text-transform: none;
+  }
+
+  table.cert-table thead th .en{
+    font-size: 0.62rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  table.cert-table tbody td{
+    padding: 20px 14px 20px 0;
+    border-bottom: 1px solid var(--hairline);
+    color: var(--navy);
+    vertical-align: middle;
+  }
+
+  table.cert-table td.field-name{
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .verified-badge{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: var(--green-dark);
+    font-weight: 600;
+  }
+
+  .verified-badge .seal{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .verified-badge .en{
+    font-weight: 400;
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  @media (max-width: 560px){
+    table.cert-table{ font-size: 0.86rem; }
+    table.cert-table td, table.cert-table th{ padding-top: 14px; padding-bottom: 14px; }
+    .actions{ flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+  <p class="brand">Inteliconnect Africa</p>
+
+  <h1>
+    Vérification de certificat
+    <span class="en">Certificate verification</span>
+  </h1>
+
+  <p class="subtitle">
+    Entrez l'identifiant du candidat inscrit sur le certificat pour confirmer son authenticité.
+    <span class="en">Enter the candidate ID printed on the certificate to confirm its authenticity.</span>
+  </p>
+
+  <div class="search-block">
+    <label for="certId">
+      Entrez l'ID du candidat
+      <span class="en">Enter the candidate ID</span>
+    </label>
+    <input type="text" id="certId" placeholder="Ex : ICA-2026-08-130001" autocomplete="off" />
+
+    <div class="actions">
+      <button id="verifyBtn" type="button">Verify</button>
+    </div>
+
+    <p class="error-msg" id="errorMsg">
+      <span class="fr-line">Aucun certificat trouvé pour cet identifiant. Vérifiez la saisie et réessayez.</span>
+      <span class="en">No certificate found for this ID. Please check and try again.</span>
+    </p>
+  </div>
+
+  <div id="resultPanel">
+    <div class="result-heading">
+      <span class="eyebrow">
+        Résultat
+        <span class="en">Result</span>
+      </span>
+      <h2>
+        Vérification de certificat
+        <span class="en">Certificate verification</span>
+      </h2>
+    </div>
+
+    <table class="cert-table">
+      <thead>
+        <tr>
+          <th>Nom<span class="en">Name</span></th>
+          <th>Prénom<span class="en">First name</span></th>
+          <th>Module<span class="en">Module</span></th>
+          <th>Vérification<span class="en">Verification</span></th>
+        </tr>
+      </thead>
+      <tbody id="resultBody">
+        <!-- rempli dynamiquement -->
+      </tbody>
+    </table>
+
+    <div class="actions" style="max-width:220px; margin-top:34px;">
+      <button id="cancelBtn" type="button">
+        Annuler
+        <span class="en">Cancel</span>
+      </button>
+    </div>
+  </div>
+
+<script>
+  // =========================================================
+  // BASE DE DONNÉES DES CERTIFICATS
+  // Complétez / modifiez les noms, prénoms et modules ici.
+  // =========================================================
+  const certificats = {
+    "ICA-2026-08-130001": { nom: "Jacques",        prenom: "NIMUBONA",       module: "Word" },
+    "ICA-2026-08-130002": { nom: "Grace",           prenom: "NDAYISHIMIYE",   module: "Excel" },
+    "ICA-2026-08-130003": { nom: "Eric",            prenom: "BARANKITSE",     module: "Ethical Hacking" },
+    "ICA-2026-08-130004": { nom: "Divine",          prenom: "NIYONZIMA",      module: "IA Générative" },
+    "ICA-2026-08-130005": { nom: "Patrick",         prenom: "HABONIMANA",     module: "TCP/IP & Routage" },
+    "ICA-2026-08-130006": { nom: "Clarisse",        prenom: "NIYUKURI",       module: "Leadership" },
+    "ICA-2026-08-130007": { nom: "Fabrice",         prenom: "NTAKIRUTIMANA",  module: "Audit interne" },
+    "ICA-2026-08-130008": { nom: "Aline",           prenom: "NKURUNZIZA",     module: "MS Publisher" },
+    "ICA-2026-08-130009": { nom: "Willy",           prenom: "BIGIRIMANA",     module: "MS PowerPoint" },
+    "ICA-2026-08-130010": { nom: "Josiane",         prenom: "NDAYAHOZE",      module: "Mailing Professionnel" },
+    "ICA-2026-08-130011": { nom: "Emmanuel",        prenom: "NIYOKWIZERA",    module: "Linux (Ubuntu)" },
+    "ICA-2026-08-130012": { nom: "Solange",         prenom: "NAHIMANA",       module: "Communication professionnelle" },
+    "ICA-2026-08-130013": { nom: "Yves",            prenom: "NDIKUMANA",      module: "Anglais professionnel" },
+    "ICA-2026-08-130014": { nom: "Diane",           prenom: "MANIRAKIZA",     module: "Français professionnel" },
+    "ICA-2026-08-130015": { nom: "Alain",           prenom: "BUCUMI",         module: "Gestion de la qualité" },
+    "ICA-2026-08-130016": { nom: "Christelle",      prenom: "NSHIMIRIMANA",   module: "Business Plan" },
+    "ICA-2026-08-130017": { nom: "David",           prenom: "NIYONGABO",      module: "E-commerce" },
+    "ICA-2026-08-130018": { nom: "Sandrine",        prenom: "MPAWENIMANA",    module: "Google Workspace" },
+    "ICA-2026-08-130019": { nom: "Jean de Dieu",    prenom: "NZEYIMANA",      module: "Sécurité Cloud" },
+    "ICA-2026-08-130020": { nom: "Belyse",          prenom: "IRAKOZE",        module: "Prompt Engineering" }
+  };
+
+  const input       = document.getElementById('certId');
+  const verifyBtn   = document.getElementById('verifyBtn');
+  const cancelBtn   = document.getElementById('cancelBtn');
+  const resultPanel = document.getElementById('resultPanel');
+  const resultBody  = document.getElementById('resultBody');
+  const errorMsg    = document.getElementById('errorMsg');
+  const searchBlock = document.querySelector('.search-block');
+
+  function verify(){
+    const id = input.value.trim().toUpperCase();
+    errorMsg.style.display = 'none';
+
+    if (!id){
+      errorMsg.querySelector('.fr-line').textContent = "Veuillez entrer un identifiant de candidat.";
+      errorMsg.querySelector('.en').textContent = "Please enter a candidate ID.";
+      errorMsg.style.display = 'block';
+      return;
+    }
+
+    const record = certificats[id];
+
+    if (!record){
+      errorMsg.querySelector('.fr-line').textContent = "Aucun certificat trouvé pour cet identifiant. Vérifiez la saisie et réessayez.";
+      errorMsg.querySelector('.en').textContent = "No certificate found for this ID. Please check and try again.";
+      errorMsg.style.display = 'block';
+      resultPanel.classList.remove('show');
+      return;
+    }
+
+    resultBody.innerHTML = `
+      <tr>
+        <td class="field-name">${record.nom}</td>
+        <td class="field-name">${record.prenom}</td>
+        <td>${record.module}</td>
+        <td>
+          <span class="verified-badge">
+            <span class="seal">&#10003;</span>
+            <span>
+              Réussite avec succès
+              <span class="en">Passed successfully</span>
+            </span>
+          </span>
+        </td>
+      </tr>
+    `;
+
+    resultPanel.classList.add('show');
+    resultPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function reset(){
+    input.value = '';
+    errorMsg.style.display = 'none';
+    resultPanel.classList.remove('show');
+    input.focus();
+  }
+
+  verifyBtn.addEventListener('click', verify);
+  cancelBtn.addEventListener('click', reset);
+  input.addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){ verify(); }
+  });
+</script>
+
+</body>
+</html>
+
