@@ -1,0 +1,716 @@
+<!-- =========================================================
+     INTELICONNECT AFRICA
+     PAGE : SÉLECTION DES CERTIFICATIONS (selectiontest.html)
+     -----------------------------------------------------------
+     Cette page présente les 3 niveaux de certification ICA
+     (Gratuit / Standard / Haute Performance), invite à rejoindre
+     le groupe WhatsApp officiel, puis affiche le footer du site.
+     Section autonome en CSS pur (préfixe .sel-), aucun conflit
+     avec Bootstrap ou les autres pages (.ica-*).
+     À FAIRE avant publication :
+       - Remplacer les 3 blocs <div class="sel-photo-placeholder">
+         par de vraies images carrées (ex: <img src="assets/img/...">)
+       - Compléter les 3 liens href="#" "Passer le Test" avec les
+         bonnes URL (page d'inscription Moodle ou formulaire).
+     ========================================================= -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Choisir sa Certification | Intelliconnect Africa</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" />
+<style>
+
+/* =========================================================
+   INTELICONNECT AFRICA - SÉLECTION DES CERTIFICATIONS
+   ========================================================= */
+
+.sel-page {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #f5f8fc;
+}
+
+/* ---------- HERO / TITRE ---------- */
+
+.sel-hero {
+    padding: 90px 20px 80px;
+    background: linear-gradient(160deg, #0c1f3f 0%, #102a56 55%, #081428 100%);
+    text-align: center;
+}
+
+.sel-hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sel-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-bottom: 22px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(143,184,255,0.5);
+    color: #eaf1ff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.sel-hero h1 {
+    margin: 0 0 22px;
+    color: #ffffff;
+    font-size: clamp(28px, 4.2vw, 46px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.sel-hero p {
+    margin: 0 auto 14px;
+    max-width: 780px;
+    color: #c6d6f5;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.sel-hero p strong {
+    color: #ffc94d;
+}
+
+.sel-hero-divider {
+    width: 90px;
+    height: 3px;
+    margin: 28px auto 0;
+    background: #f0a500;
+    border-radius: 3px;
+}
+
+/* ---------- CARTES DE CERTIFICATION ---------- */
+
+.sel-cards-section {
+    padding: 70px 20px 80px;
+}
+
+.sel-cards-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.sel-cards-header h2 {
+    margin: 0 0 12px;
+    color: #102a56;
+    font-size: clamp(24px, 3.2vw, 34px);
+    font-weight: 800;
+}
+
+.sel-cards-header p {
+    margin: 0;
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.sel-cards-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sel-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 28px;
+}
+
+.sel-card-col {
+    box-sizing: border-box;
+    flex: 1 1 100%;
+    max-width: 100%;
+    display: flex;
+}
+
+@media (min-width: 900px) {
+    .sel-card-col {
+        flex: 1 1 calc(33.333% - 19px);
+        max-width: calc(33.333% - 19px);
+    }
+}
+
+.sel-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(16, 42, 86, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sel-card:hover {
+    transform: translateY(-8px);
+    border-color: #2878e8;
+    box-shadow: 0 18px 38px rgba(16, 42, 86, 0.15);
+}
+
+.sel-card-top {
+    position: relative;
+    background: #102a56;
+}
+
+.sel-card-top .sel-ribbon {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #102a56;
+}
+
+.sel-ribbon-free { background: #d6ecff; color: #0b4fa8; }
+.sel-ribbon-standard { background: #ffe3a6; color: #8a5a00; }
+.sel-ribbon-pro { background: #ffd0d0; color: #a41313; }
+
+/* Emplacement photo carrée (ratio 1:1, dit "4x4") */
+.sel-photo-placeholder {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    background:
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.035) 0 12px, transparent 12px 24px),
+        linear-gradient(160deg, #16305e 0%, #0c1f3f 100%);
+    color: #8fb8ff;
+}
+
+.sel-photo-placeholder svg {
+    width: 44px;
+    height: 44px;
+    opacity: 0.85;
+}
+
+.sel-photo-placeholder span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    opacity: 0.85;
+}
+
+/* Si une vraie image est utilisée à la place du placeholder */
+.sel-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sel-card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 26px 24px 24px;
+}
+
+.sel-card-body h3 {
+    margin: 0 0 12px;
+    color: #102a56;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.sel-card-body p.sel-desc {
+    margin: 0 0 18px;
+    color: #5a6479;
+    font-size: 14.5px;
+    line-height: 1.75;
+}
+
+.sel-feature-list {
+    list-style: none;
+    margin: 0 0 22px;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.sel-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 11px;
+    color: #344056;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.sel-feature-list li:last-child { margin-bottom: 0; }
+
+.sel-feature-list li .sel-check {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f0ff;
+    color: #1557b0;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.sel-card-price {
+    margin: 0 0 20px;
+    padding-top: 16px;
+    border-top: 1px dashed #e5eaf0;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.sel-card-price .sel-price-main {
+    font-size: 22px;
+    font-weight: 800;
+    color: #102a56;
+}
+
+.sel-card-price .sel-price-sub {
+    font-size: 13px;
+    color: #90a0b7;
+    font-weight: 600;
+}
+
+.sel-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    padding: 9px 18px;
+    border-radius: 50px;
+    background: #eaf1ff;
+    color: #1557b0;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none !important;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.sel-card-cta:hover {
+    background: #1557b0;
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* ---------- SECTION WHATSAPP ---------- */
+
+.sel-whatsapp-section {
+    padding: 10px 20px 90px;
+}
+
+.sel-whatsapp-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 36px;
+    padding: 46px 42px;
+    border-radius: 26px;
+    background: linear-gradient(135deg, #0d3b28 0%, #10502f 100%);
+    box-shadow: 0 18px 40px rgba(16, 80, 47, 0.22);
+}
+
+.sel-whatsapp-icon {
+    flex: 0 0 auto;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sel-whatsapp-icon svg {
+    width: 42px;
+    height: 42px;
+    fill: #ffffff;
+}
+
+.sel-whatsapp-text {
+    flex: 1 1 380px;
+}
+
+.sel-whatsapp-text h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: clamp(21px, 2.6vw, 28px);
+    font-weight: 800;
+}
+
+.sel-whatsapp-text p {
+    margin: 0;
+    color: #cdeedd;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.sel-whatsapp-text p strong {
+    color: #ffffff;
+}
+
+.sel-whatsapp-cta {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 28px;
+    border-radius: 50px;
+    background: #25D366;
+    color: #073a20 !important;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none !important;
+    box-shadow: 0 10px 22px rgba(37, 211, 102, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+.sel-whatsapp-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(37, 211, 102, 0.45);
+}
+
+@media (max-width: 600px) {
+    .sel-whatsapp-box {
+        padding: 34px 26px;
+        text-align: center;
+        justify-content: center;
+    }
+    .sel-whatsapp-cta {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ---------- RESPONSIVE GÉNÉRAL ---------- */
+
+@media (max-width: 991px) {
+    .sel-hero { padding: 70px 20px 60px; }
+    .sel-cards-section { padding: 55px 20px 60px; }
+}
+
+@media (max-width: 575px) {
+    .sel-hero { padding: 55px 16px 45px; }
+    .sel-hero p { font-size: 15.5px; }
+    .sel-cards-section { padding: 45px 16px 50px; }
+    .sel-card-body { padding: 22px 20px 20px; }
+}
+
+/* ---------- BOUTON RETOUR ACCUEIL ---------- */
+
+.back-home{
+    position:fixed;
+    top:20px;
+    left:20px;
+    background:#28a745;
+    color:white;
+    padding:12px 18px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:bold;
+    box-shadow:0 3px 8px rgba(0,0,0,0.2);
+    transition:0.3s;
+    z-index:1000;
+}
+
+.back-home:hover{
+    background:#0B3D91;
+    transform:translateX(-5px);
+}
+
+/* ---------- BOUTON RETOUR EN HAUT ---------- */
+
+.sel-to-top {
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #102a56;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    box-shadow: 0 8px 20px rgba(16, 42, 86, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, background 0.25s ease;
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+}
+
+.sel-to-top.sel-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sel-to-top:hover {
+    background: #2878e8;
+}
+
+.sel-to-top svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+</style>
+
+<a href="index.html#page-top" class="back-home">
+    ← Retour Accueil
+</a>
+
+</head>
+<body class="sel-page">
+
+<!-- Ancre en haut de page pour le bouton "Retour en haut" -->
+<div id="sel-top"></div>
+
+<!-- =====================================================
+     1. SECTION TITRE
+     ===================================================== -->
+<section class="sel-hero">
+    <div class="sel-hero-inner">
+        <span class="sel-badge">INTELICONNECT AFRICA — CERTIFICATIONS</span>
+        <h1>Bienvenue sur la page des Certifications ICA</h1>
+        <p>
+            Choisis la certification qui correspond le mieux à <strong>tes compétences</strong>
+            et à <strong>tes moyens financiers</strong>. Tous nos tests aboutissent à un certificat,
+            mais leur <strong>niveau d'importance et de reconnaissance</strong> varie selon la
+            formule choisie.
+        </p>
+        <p>
+            Les certificats Gratuit, Standard et Haute Performance ne sont ni équivalents,
+            ni de même valeur sur le marché du travail : chacun correspond à un niveau
+            d'exigence, de vérifiabilité et de reconnaissance différent. Prends le temps de
+            lire attentivement les trois offres ci-dessous avant de faire ton choix.
+        </p>
+        <div class="sel-hero-divider"></div>
+    </div>
+</section>
+
+<!-- =====================================================
+     2. SECTION DES 3 CARTES DE CERTIFICATION
+     ===================================================== -->
+<section class="sel-cards-section">
+    <div class="sel-cards-header">
+        <h2>Nos trois niveaux de certification</h2>
+        <p>Compare les formules et choisis celle qui correspond à ton objectif.</p>
+    </div>
+
+    <div class="sel-cards-container">
+        <div class="sel-cards-row">
+
+            <!-- ---------- CARTE 1 : TESTS GRATUITS ---------- -->
+            <div class="sel-card-col">
+                <div class="sel-card">
+                    <div class="sel-card-top">
+                        <span class="sel-ribbon sel-ribbon-free">GRATUIT</span>
+                        <!-- Remplacer ce bloc par : <img src="assets/img/certif-gratuit.jpg" alt="Test Gratuit"> -->
+                        <div class="sel-photo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+                            <span>Photo (format carré)</span>
+                        </div>
+                    </div>
+                    <div class="sel-card-body">
+                        <h3>Tests Gratuits</h3>
+                        <p class="sel-desc">
+                            Ces tests aboutissent à un certificat gratuit, sans numéro
+                            d'identification du certificat ni QR code de vérification.
+                            Idéal pour découvrir un domaine et t'auto-évaluer sans engagement.
+                        </p>
+                        <ul class="sel-feature-list">
+                            <li><span class="sel-check">✓</span> Certificat gratuit, sans code de vérification</li>
+                            <li><span class="sel-check">✓</span> Note de réussite fixée à 8/10</li>
+                            <li><span class="sel-check">✓</span> Une seule tentative autorisée</li>
+                        </ul>
+                        <div class="sel-card-price">
+                            <span class="sel-price-main">Gratuit</span>
+                            <span class="sel-price-sub">0 Fbu</span>
+                        </div>
+                        <a href="#" class="sel-card-cta">Passer le Test →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------- CARTE 2 : TESTS STANDARDS ---------- -->
+            <div class="sel-card-col">
+                <div class="sel-card">
+                    <div class="sel-card-top">
+                        <span class="sel-ribbon sel-ribbon-standard">STANDARD</span>
+                        <!-- Remplacer ce bloc par : <img src="assets/img/certif-standard.jpg" alt="Test Standard"> -->
+                        <div class="sel-photo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+                            <span>Photo (format carré)</span>
+                        </div>
+                    </div>
+                    <div class="sel-card-body">
+                        <h3>Tests Standards</h3>
+                        <p class="sel-desc">
+                            Ces tests sont payants. Ils aboutissent à un certificat standard,
+                            très bien vérifiable en ligne grâce à un QR code et un numéro
+                            unique — une preuve fiable et professionnelle de tes compétences.
+                        </p>
+                        <ul class="sel-feature-list">
+                            <li><span class="sel-check">✓</span> Certificat vérifiable en ligne avec QR code</li>
+                            <li><span class="sel-check">✓</span> Numéro d'identification unique</li>
+                            <li><span class="sel-check">✓</span> Reconnaissance renforcée sur le marché du travail</li>
+                        </ul>
+                        <div class="sel-card-price">
+                            <span class="sel-price-main">10 USD</span>
+                            <span class="sel-price-sub">soit 25 000 BIF</span>
+                        </div>
+                        <a href="#" class="sel-card-cta">Passer le Test →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------- CARTE 3 : TESTS DE HAUTE PERFORMANCE ---------- -->
+            <div class="sel-card-col">
+                <div class="sel-card">
+                    <div class="sel-card-top">
+                        <span class="sel-ribbon sel-ribbon-pro">HAUTE PERFORMANCE</span>
+                        <!-- Remplacer ce bloc par : <img src="assets/img/certif-haute-performance.jpg" alt="Test Haute Performance"> -->
+                        <div class="sel-photo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+                            <span>Photo (format carré)</span>
+                        </div>
+                    </div>
+                    <div class="sel-card-body">
+                        <h3>Tests de Haute Performance</h3>
+                        <p class="sel-desc">
+                            Ces tests sont exigeants et de niveau avancé. Ils aboutissent à
+                            un certificat hautement qualifié, avec un identifiant personnalisé
+                            en ligne et une plateforme de vérification automatisée.
+                        </p>
+                        <ul class="sel-feature-list">
+                            <li><span class="sel-check">✓</span> Certificat hautement qualifié, niveau avancé</li>
+                            <li><span class="sel-check">✓</span> ID d'identification personnalisée en ligne</li>
+                            <li><span class="sel-check">✓</span> Plateforme de vérification automatisée</li>
+                        </ul>
+                        <div class="sel-card-price">
+                            <span class="sel-price-main">25 USD</span>
+                            <span class="sel-price-sub">soit 70 000 BIF</span>
+                        </div>
+                        <a href="#" class="sel-card-cta">Passer le Test →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     3. SECTION GROUPE WHATSAPP
+     ===================================================== -->
+<section class="sel-whatsapp-section">
+    <div class="sel-whatsapp-box">
+        <div class="sel-whatsapp-icon">
+            <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.6 0.7 5 2 7.1L3 29l6.4-2.2c2 1.1 4.2 1.7 6.6 1.7 7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2.1 0-4.1-0.6-5.8-1.6l-0.4-0.2-3.8 1.3 1.3-3.7-0.3-0.4c-1.1-1.8-1.8-3.8-1.8-6 0-6 4.9-10.9 10.9-10.9S27 9.6 27 15.6 22 26.1 16 26.1z"/><path d="M21.6 18.2c-0.3-0.2-1.8-0.9-2.1-1-0.3-0.1-0.5-0.2-0.7 0.2s-0.8 1-0.9 1.2c-0.2 0.2-0.3 0.2-0.6 0.1-0.3-0.2-1.3-0.5-2.5-1.6-0.9-0.8-1.6-1.8-1.7-2.1-0.2-0.3 0-0.5 0.1-0.6 0.1-0.1 0.3-0.3 0.4-0.5 0.1-0.2 0.2-0.3 0.3-0.5 0.1-0.2 0-0.4 0-0.6-0.1-0.2-0.7-1.7-1-2.3-0.3-0.6-0.5-0.5-0.7-0.5h-0.6c-0.2 0-0.6 0.1-0.9 0.4-0.3 0.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c0.2 0.2 2.4 3.7 5.9 5.1 0.8 0.3 1.5 0.6 2 0.7 0.8 0.3 1.6 0.2 2.2 0.1 0.7-0.1 1.8-0.7 2.1-1.4 0.3-0.7 0.3-1.3 0.2-1.4-0.1-0.2-0.3-0.3-0.6-0.4z"/></svg>
+        </div>
+        <div class="sel-whatsapp-text">
+            <h2>Rejoins notre groupe WhatsApp officiel</h2>
+            <p>
+                C'est dans ce groupe que passe <strong>la majorité de nos informations</strong> :
+                ouverture des tests, dates limites, résultats, opportunités et annonces importantes.
+                Ne pas y être signifie <strong>risquer de manquer des informations capitales</strong>
+                pour ta certification.
+            </p>
+        </div>
+        <a href="https://chat.whatsapp.com/COm91yWPo1EFFDfb2PH0Xc?s=sh&p=a&mlu=4" target="_blank" rel="noopener noreferrer" class="sel-whatsapp-cta">
+            <i class="fab fa-whatsapp"></i> Rejoindre le groupe
+        </a>
+    </div>
+</section>
+
+<!-- =====================================================
+     4. FOOTER
+     ===================================================== -->
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-start">Copyright &copy; Inteliconnect Africa 2026 <br>Powered by @Inteliconnect Africa </div>
+            <div class="col-lg-4 my-3 my-lg-0">
+                <a class="btn btn-social mx-2" style="background-color:#FF0000; color:#fff;" href="https://www.youtube.com/channel/UCnn7EInu4WU8NsWKwDGHlHQ" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-social mx-2" style="background-color:#1877F2; color:#fff;" href="https://www.facebook.com/IntelliconnectAfrica" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a class="link-dark text-decoration-none me-3" href="politiquesdeconfidentialite.html">Politiques de Confidentialité</a>
+                <a class="link-dark text-decoration-none" href="mentionslegales.html">Mentions légales</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bouton flottant : Retour en haut de la page -->
+<a href="#sel-top" id="sel-to-top" class="sel-to-top" aria-label="Retour en haut de la page">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</a>
+
+<script>
+(function () {
+    var btn = document.getElementById('sel-to-top');
+    if (!btn) return;
+
+    function toggleButton() {
+        if (window.scrollY > 400) {
+            btn.classList.add('sel-visible');
+        } else {
+            btn.classList.remove('sel-visible');
+        }
+    }
+
+    window.addEventListener('scroll', toggleButton, { passive: true });
+    toggleButton();
+
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+</script>
+
+</body>
+</html>
