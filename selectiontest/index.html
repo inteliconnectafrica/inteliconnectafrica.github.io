@@ -1,17 +1,28 @@
 <!-- =========================================================
      INTELICONNECT AFRICA
-     PAGE : SÉLECTION DES CERTIFICATIONS (selectiontest.html)
+     PAGE : SÉLECTION DES CERTIFICATIONS
+     Fichier : /selectiontest/index.html
+     (accessible sans extension .html à :
+      https://www.inteliconnectafrica.com/selectiontest/)
      -----------------------------------------------------------
      Cette page présente les 3 niveaux de certification ICA
      (Gratuit / Standard / Haute Performance), invite à rejoindre
      le groupe WhatsApp officiel, puis affiche le footer du site.
      Section autonome en CSS pur (préfixe .sel-), aucun conflit
      avec Bootstrap ou les autres pages (.ica-*).
+
+     Ce fichier vivant dans un sous-dossier (/selectiontest/), tous
+     les chemins vers la racine du site (favicon, css/styles.css,
+     retour accueil, footer) utilisent des chemins ABSOLUS
+     (commençant par "/") plutôt que relatifs, pour rester valides
+     quel que soit le dossier où la page est servie.
+
      À FAIRE avant publication :
        - Remplacer les 3 blocs <div class="sel-photo-placeholder">
-         par de vraies images carrées (ex: <img src="assets/img/...">)
-       - Compléter les 3 liens href="#" "Passer le Test" avec les
-         bonnes URL (page d'inscription Moodle ou formulaire).
+         par de vraies images carrées
+         (ex: <img src="/assets/img/certif-gratuit.jpg">)
+       - Vérifier que /assets/favicon.ico et /css/styles.css
+         existent bien à la racine du site.
      ========================================================= -->
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,14 +31,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Choisir sa Certification | Intelliconnect Africa</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
 
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
 
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
 <style>
 
 /* =========================================================
@@ -497,7 +508,7 @@
 
 </style>
 
-<a href="index.html#page-top" class="back-home">
+<a href="/index.html#page-top" class="back-home">
     ← Retour Accueil
 </a>
 
@@ -547,7 +558,7 @@
                 <div class="sel-card">
                     <div class="sel-card-top">
                         <span class="sel-ribbon sel-ribbon-free">GRATUIT</span>
-                        <!-- Remplacer ce bloc par : <img src="assets/img/certif-gratuit.jpg" alt="Test Gratuit"> -->
+                        <!-- Remplacer ce bloc par : <img src="/assets/img/certif-gratuit.jpg" alt="Test Gratuit"> -->
                         <div class="sel-photo-placeholder">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
                             <span>Photo (format carré)</span>
@@ -569,7 +580,7 @@
                             <span class="sel-price-main">Gratuit</span>
                             <span class="sel-price-sub">0 Fbu</span>
                         </div>
-                        <a href="#" class="sel-card-cta">Passer le Test →</a>
+                        <a href="https://www.inteliconnectafrica.com/cohortetestfree.html" class="sel-card-cta">Passer le Test →</a>
                     </div>
                 </div>
             </div>
@@ -579,7 +590,7 @@
                 <div class="sel-card">
                     <div class="sel-card-top">
                         <span class="sel-ribbon sel-ribbon-standard">STANDARD</span>
-                        <!-- Remplacer ce bloc par : <img src="assets/img/certif-standard.jpg" alt="Test Standard"> -->
+                        <!-- Remplacer ce bloc par : <img src="/assets/img/certif-standard.jpg" alt="Test Standard"> -->
                         <div class="sel-photo-placeholder">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
                             <span>Photo (format carré)</span>
@@ -601,7 +612,7 @@
                             <span class="sel-price-main">10 USD</span>
                             <span class="sel-price-sub">soit 25 000 BIF</span>
                         </div>
-                        <a href="#" class="sel-card-cta">Passer le Test →</a>
+                        <a href="https://www.inteliconnectafrica.com/cohorteteststandards.html" class="sel-card-cta">Passer le Test →</a>
                     </div>
                 </div>
             </div>
@@ -611,7 +622,7 @@
                 <div class="sel-card">
                     <div class="sel-card-top">
                         <span class="sel-ribbon sel-ribbon-pro">HAUTE PERFORMANCE</span>
-                        <!-- Remplacer ce bloc par : <img src="assets/img/certif-haute-performance.jpg" alt="Test Haute Performance"> -->
+                        <!-- Remplacer ce bloc par : <img src="/assets/img/certif-haute-performance.jpg" alt="Test Haute Performance"> -->
                         <div class="sel-photo-placeholder">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
                             <span>Photo (format carré)</span>
@@ -633,7 +644,7 @@
                             <span class="sel-price-main">25 USD</span>
                             <span class="sel-price-sub">soit 70 000 BIF</span>
                         </div>
-                        <a href="#" class="sel-card-cta">Passer le Test →</a>
+                        <a href="https://www.inteliconnectafrica.com/viptest.html" class="sel-card-cta">Passer le Test →</a>
                     </div>
                 </div>
             </div>
@@ -677,8 +688,8 @@
                 <a class="btn btn-social mx-2" style="background-color:#1877F2; color:#fff;" href="https://www.facebook.com/IntelliconnectAfrica" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a class="link-dark text-decoration-none me-3" href="politiquesdeconfidentialite.html">Politiques de Confidentialité</a>
-                <a class="link-dark text-decoration-none" href="mentionslegales.html">Mentions légales</a>
+                <a class="link-dark text-decoration-none me-3" href="/politiquesdeconfidentialite.html">Politiques de Confidentialité</a>
+                <a class="link-dark text-decoration-none" href="/mentionslegales.html">Mentions légales</a>
             </div>
         </div>
     </div>
