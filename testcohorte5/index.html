@@ -1,1 +1,730 @@
+<!-- =========================================================
+     INTELICONNECT AFRICA
+     TESTS DE COMPÉTENCE PROFESSIONNELLE - 5È COHORTE
+     DÉBUT : TOUT LE MOIS D'OCTOBRE
+     -----------------------------------------------------------
+     43 cartes / 43 tests, répartis en 14 catégories.
+     À FAIRE avant publication : compléter chaque
+     href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id="
+     avec le vrai id du test correspondant sur Moodle (le id= est
+     laissé vide volontairement, à toi de le remplir).
+     Cette section est autonome (grille en CSS pur) : elle
+     fonctionne que ta page charge Bootstrap ou non, aucun
+     conflit possible avec les classes .row/.col de Bootstrap.
+     ========================================================= -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Certification - 5è Cohorte | Intelliconnect Africa</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" />
+<style>
+
+/* =========================================================
+   INTELICONNECT AFRICA - TESTS DE COMPÉTENCE
+   ========================================================= */
+
+.ica-tests-section {
+    padding: 70px 0;
+    background: #f5f8fc;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+}
+
+.ica-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 18px;
+    border-radius: 50px;
+    background: #e8f0ff;
+    color: #1557b0;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.ica-main-title {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 800;
+    color: #102a56;
+}
+
+.ica-warning-box {
+    max-width: 950px;
+    margin: 0 auto 60px;
+    padding: 25px 30px;
+    border-left: 6px solid #f0a500;
+    border-radius: 12px;
+    background: #fff8e6;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    text-align: left;
+}
+
+.ica-warning-box h3 {
+    margin-bottom: 12px;
+    color: #8a5a00;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.ica-warning-box p {
+    margin-bottom: 8px;
+    color: #594d35;
+    line-height: 1.7;
+}
+
+.ica-category {
+    margin-bottom: 65px;
+}
+
+.ica-category-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.ica-category-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #102a56;
+    font-size: 28px;
+}
+
+.ica-category-header h2 {
+    margin: 0 0 5px;
+    color: #102a56;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.ica-category-header p {
+    margin: 0;
+    color: #667085;
+    font-size: 15px;
+}
+
+.ica-course-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 285px;
+    padding: 25px 21px;
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 18px;
+    text-decoration: none !important;
+    color: inherit !important;
+    box-shadow: 0 5px 18px rgba(16, 42, 86, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.ica-course-card:hover,
+.ica-course-card:focus-visible {
+    transform: translateY(-8px);
+    border-color: #2878e8;
+    box-shadow: 0 15px 35px rgba(16, 42, 86, 0.14);
+}
+
+.ica-course-card:focus-visible {
+    outline: 3px solid #2878e8;
+    outline-offset: 3px;
+}
+
+.ica-card-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    background: #edf4ff;
+    font-size: 25px;
+}
+
+.ica-course-card h3 {
+    margin: 0 0 12px;
+    color: #102a56;
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 750;
+}
+
+.ica-course-card p {
+    flex-grow: 1;
+    margin: 0 0 20px;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.ica-card-link {
+    display: inline-flex;
+    align-items: center;
+    color: #1769d2;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.ica-course-card:hover .ica-card-link {
+    color: #0b4fa8;
+}
+
+/* =========================================================
+   CONTENEUR ET GRILLE — 100% CSS, sans dépendance à Bootstrap.
+   Fonctionne donc dans n'importe quelle page, avec ou sans
+   Bootstrap chargé.
+   ========================================================= */
+
+.ica-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.ica-header-block {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.ica-no-margin {
+    margin-bottom: 0 !important;
+}
+
+.ica-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.ica-col {
+    box-sizing: border-box;
+    /* mobile : 1 carte par ligne */
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+/* tablette (≥576px) : 2 cartes par ligne */
+@media (min-width: 576px) {
+    .ica-col {
+        flex: 1 1 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+}
+
+/* tablette large (≥768px) : 3 cartes par ligne */
+@media (min-width: 768px) {
+    .ica-col {
+        flex: 1 1 calc(33.333% - 16px);
+        max-width: calc(33.333% - 16px);
+    }
+}
+
+/* =========================================================
+   5 cartes par ligne sur grand écran, à l'intérieur de
+   chaque catégorie. Les catégories qui n'ont pas un multiple
+   de 5 cours laisseront un espace vide en fin de ligne —
+   c'est normal avec un regroupement par catégorie.
+   ========================================================= */
+
+@media (min-width: 992px) {
+    .ica-col {
+        flex: 1 1 calc(20% - 19.2px);
+        max-width: calc(20% - 19.2px);
+    }
+}
+
+@media (max-width: 991px) {
+    .ica-tests-section {
+        padding: 50px 0;
+    }
+    .ica-course-card {
+        min-height: 270px;
+    }
+}
+
+@media (max-width: 575px) {
+    .ica-tests-section {
+        padding: 40px 12px;
+    }
+    .ica-main-title {
+        font-size: 29px;
+    }
+    .ica-warning-box {
+        padding: 20px;
+    }
+    .ica-category-header {
+        align-items: flex-start;
+    }
+    .ica-category-header h2 {
+        font-size: 23px;
+    }
+    .ica-category-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 22px;
+    }
+    .ica-course-card {
+        min-height: 250px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section id="tests-competence" class="ica-tests-section">
+
+    <div class="ica-container">
+
+        <!-- En-tête -->
+        <div class="ica-header-block">
+            <span class="ica-badge">INTELICONNECT AFRICA</span>
+
+            <h1 class="ica-main-title">
+                Les Tests de Compétence professionnelle de la 5è Cohorte
+                sur Inteliconnect Africa : c'est le début, pour tout le mois d'octobre.
+            </h1>
+
+            <div class="ica-warning-box">
+                <h3>⚠️ Attention : Lis ceci avant de continuer.</h3>
+                <p>
+                    Passes un ou plus de Test(s) selon tes domaines de compétences.
+                    Tu as <strong>48 heures ouvrables</strong> pour passer ton Test,
+                    mais chaque Test ne compte que <strong>90 minutes avec compte à rebours</strong>.
+                </p>
+                <p class="ica-no-margin">
+                    <strong>Choisis soigneusement le test correspondant à ton domaine
+                    de compétence.</strong>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             1. DÉVELOPPEMENT WEB (4)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">🌐</span>
+                <div>
+                    <h2>Développement Web</h2>
+                    <p>Tests portant sur les langages et outils de création de sites et d'applications web.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🎨</div><h3>HTML/CSS</h3><p>Évalue ta maîtrise de la structure et de la mise en forme des pages web avec HTML et CSS.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">⚡</div><h3>JavaScript</h3><p>Teste tes compétences en programmation JavaScript pour créer des pages web dynamiques et interactives.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">📝</div><h3>WordPress</h3><p>Évalue ta capacité à créer, personnaliser et administrer un site web avec WordPress.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🧑‍💻</div><h3>Développement Web Full-Stack</h3><p>Teste ta maîtrise du développement complet d'une application web, du front-end au back-end.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             2. DÉVELOPPEMENT MOBILE (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">📱</span>
+                <div>
+                    <h2>Développement Mobile</h2>
+                    <p>Tests consacrés à la conception et au développement d'applications pour smartphones.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🦋</div><h3>Flutter</h3><p>Évalue tes compétences dans la création d'applications mobiles multiplateformes avec Flutter.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🤖</div><h3>Android (Kotlin/Java)</h3><p>Teste ta maîtrise du développement d'applications Android avec Kotlin et Java.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">⚛️</div><h3>React Native</h3><p>Évalue ta capacité à développer des applications mobiles avec React Native.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             3. MARKETING DIGITAL (4)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">📣</span>
+                <div>
+                    <h2>Marketing Digital</h2>
+                    <p>Tests portant sur la visibilité en ligne, la communication et la promotion numérique.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🔍</div><h3>SEO</h3><p>Teste tes connaissances des techniques d'optimisation pour améliorer le référencement naturel d'un site.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">📲</div><h3>Réseaux sociaux (Social Media Management)</h3><p>Évalue tes compétences en gestion, animation et stratégie de contenu sur les réseaux sociaux.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">✍️</div><h3>Copywriting</h3><p>Teste ta capacité à rédiger des textes persuasifs qui captent l'attention et incitent à l'action.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">📧</div><h3>Email Marketing</h3><p>Évalue ta maîtrise des campagnes d'emailing, de la conception à l'analyse des résultats.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             4. DESIGN GRAPHIQUE & MULTIMÉDIA (4)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">🎨</span>
+                <div>
+                    <h2>Design Graphique &amp; Multimédia</h2>
+                    <p>Tests consacrés à la création visuelle, au montage et à la conception d'interfaces.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🖌️</div><h3>Canva Professionnel</h3><p>Teste ta maîtrise de Canva pour concevoir des visuels professionnels et attractifs.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🖼️</div><h3>Adobe Photoshop</h3><p>Évalue tes compétences en retouche et création d'images avec Adobe Photoshop.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🎬</div><h3>Montage vidéo (CapCut/Premiere)</h3><p>Teste ta capacité à monter et finaliser des vidéos avec CapCut ou Premiere.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">📐</div><h3>UI/UX Design</h3><p>Évalue ta compréhension de la conception d'interfaces et d'expériences utilisateur efficaces.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             5. BASES DE DONNÉES & BI (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">🗄️</span>
+                <div>
+                    <h2>Bases de données &amp; BI</h2>
+                    <p>Tests portant sur l'interrogation des bases de données et la visualisation décisionnelle.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🗃️</div><h3>SQL</h3><p>Teste ta maîtrise du langage SQL pour interroger et manipuler des bases de données.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">📊</div><h3>Power BI</h3><p>Évalue tes compétences en création de tableaux de bord et de rapports avec Power BI.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">📈</div><h3>Tableau</h3><p>Teste ta capacité à visualiser et analyser des données avec Tableau.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             6. RÉSEAUX & CLOUD AVANCÉ (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">☁️</span>
+                <div>
+                    <h2>Réseaux &amp; Cloud avancé</h2>
+                    <p>Tests consacrés aux réseaux d'entreprise et aux fondamentaux du cloud.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🌐</div><h3>CCNA (bases réseau Cisco)</h3><p>Évalue tes connaissances des fondamentaux des réseaux Cisco : configuration, adressage et dépannage.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">☁️</div><h3>AWS Fondamentaux</h3><p>Teste ta compréhension des services et concepts fondamentaux d'Amazon Web Services.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🔷</div><h3>Azure Fondamentaux</h3><p>Évalue ta maîtrise des services et concepts fondamentaux de Microsoft Azure.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             7. RESSOURCES HUMAINES (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">👥</span>
+                <div>
+                    <h2>Ressources Humaines</h2>
+                    <p>Tests portant sur le recrutement, la gestion du personnel et la paie.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">👥</div><h3>Gestion des Ressources Humaines</h3><p>Teste tes compétences en gestion du personnel, des carrières et de l'administration RH.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🎯</div><h3>Recrutement &amp; Sélection</h3><p>Évalue ta capacité à définir un besoin, attirer, sélectionner et intégrer les bons candidats.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">💵</div><h3>Paie</h3><p>Teste ta maîtrise du calcul, de l'établissement et du suivi de la paie et des cotisations.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             8. SUPPLY CHAIN & ACHATS (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">🚚</span>
+                <div>
+                    <h2>Supply Chain &amp; Achats</h2>
+                    <p>Tests consacrés aux achats, à la chaîne logistique et aux marchés publics.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🛒</div><h3>Gestion des achats</h3><p>Évalue tes connaissances des processus d'achat, de sélection des fournisseurs et de négociation.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🔗</div><h3>Supply Chain Management</h3><p>Teste ta maîtrise de la planification et du pilotage des flux, de l'approvisionnement à la livraison.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🏛️</div><h3>Procurement public</h3><p>Évalue ta compréhension des règles et procédures de passation des marchés publics.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             9. FINANCE & FINTECH (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">💳</span>
+                <div>
+                    <h2>Finance &amp; Fintech</h2>
+                    <p>Tests sur les services financiers mobiles, la microfinance et l'analyse du crédit.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">📲</div><h3>Mobile Money &amp; Fintech</h3><p>Teste tes connaissances des services financiers mobiles et des innovations fintech en Afrique.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🏦</div><h3>Microfinance</h3><p>Évalue ta maîtrise des principes, produits et de la gestion des institutions de microfinance.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🧮</div><h3>Analyse de crédit</h3><p>Teste ta capacité à évaluer la solvabilité d'un emprunteur et les risques d'un crédit.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             10. SERVICE CLIENT & VENTE (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">🛍️</span>
+                <div>
+                    <h2>Service Client &amp; Vente</h2>
+                    <p>Tests portant sur la vente, la négociation et la relation client.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">💼</div><h3>Techniques de vente</h3><p>Évalue tes compétences en prospection, argumentation et conclusion de vente.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🤝</div><h3>Négociation commerciale</h3><p>Teste ta maîtrise des techniques de négociation pour conclure des accords durables.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🎧</div><h3>Service client</h3><p>Évalue ta capacité à accueillir, écouter et fidéliser les clients.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             11. JOURNALISME & MÉDIAS (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">📰</span>
+                <div>
+                    <h2>Journalisme &amp; Médias</h2>
+                    <p>Tests consacrés à la rédaction, à l'animation de communautés et à la production de contenu.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">✍️</div><h3>Rédaction journalistique</h3><p>Teste ta maîtrise des genres journalistiques, de la collecte d'informations et de l'écriture de presse.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">💬</div><h3>Community Management</h3><p>Évalue tes compétences en animation de communautés et en gestion de la réputation en ligne.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🎥</div><h3>Production de contenu</h3><p>Teste ta capacité à concevoir et produire des contenus écrits, visuels et audiovisuels.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             12. TRADUCTION & INTERPRÉTATION (2)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">🗣️</span>
+                <div>
+                    <h2>Traduction &amp; Interprétation</h2>
+                    <p>Tests portant sur la traduction professionnelle et l'interprétation entre deux langues.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🌍</div><h3>Traduction Français-Anglais professionnelle</h3><p>Évalue ta capacité à traduire avec précision des textes professionnels entre le français et l'anglais.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🗣️</div><h3>Interprétation de liaison</h3><p>Teste ta maîtrise de l'interprétation orale dans des échanges entre deux interlocuteurs.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             13. GESTION HUMANITAIRE (3)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">🕊️</span>
+                <div>
+                    <h2>Gestion Humanitaire</h2>
+                    <p>Tests sur l'action humanitaire, le suivi-évaluation, la protection et le genre.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🆘</div><h3>Action humanitaire</h3><p>Évalue tes connaissances des principes, acteurs et modes d'intervention de l'action humanitaire.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">📊</div><h3>Suivi-Évaluation (M&amp;E) approfondi</h3><p>Teste ta maîtrise approfondie des méthodes, indicateurs et outils de suivi-évaluation.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🛡️</div><h3>Protection &amp; Genre</h3><p>Évalue ta compréhension des enjeux de protection des populations et d'intégration du genre.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+
+        <!-- =====================================================
+             14. QUALITÉ & NORMES (2)
+             ===================================================== -->
+
+        <div class="ica-category">
+            <div class="ica-category-header">
+                <span class="ica-category-icon">✅</span>
+                <div>
+                    <h2>Qualité &amp; Normes</h2>
+                    <p>Tests consacrés aux normes de qualité et à l'amélioration continue des processus.</p>
+                </div>
+            </div>
+
+            <div class="ica-row">
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🏅</div><h3>ISO 9001</h3><p>Teste tes connaissances des exigences de la norme ISO 9001 sur le management de la qualité.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+                <div class="ica-col"><a href="https://inteliconnect.moodlecloud.com/mod/quiz/view.php?id=" class="ica-course-card"><div class="ica-card-icon">🔄</div><h3>Lean/Six Sigma bases</h3><p>Évalue ta compréhension des bases du Lean et du Six Sigma pour améliorer les processus.</p><span class="ica-card-link">Passer le test →</span></a></div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+     <!-- Conteneur qui prend 50% de la largeur sur écran moyen/large (12/12 sur mobile) -->
+<div class="col-12 col-md-6 mx-auto">
+  <div class="card bg-dark text-white border-secondary h-100 shadow-sm">
+    <div class="card-body d-flex flex-column justify-content-between p-3">
+      <div>
+        <div class="d-flex align-items-center mb-2">
+          <i class="bi bi-whatsapp text-success fs-3 me-2"></i>
+          <h6 class="card-title mb-0 fw-bold">Intégrez notre Groupe WhatsApp</h6>
+        </div>
+        <p class="card-text text-muted small mb-3">
+          Echangez avec notre communauté et suivez nos dernières actualités en direct.
+        </p>
+      </div>
+      <a href="https://chat.whatsapp.com/COm91yWPo1EFFDfb2PH0Xc?s=sh&p=a&mlu=4" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn btn-success w-100 fw-semibold d-flex align-items-center justify-content-center gap-2">
+         <i class="bi bi-whatsapp"></i> Rejoindre le groupe
+      </a>
+    </div>
+  </div>
+</div>
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Inteliconnect Africa 2026 <br>Powered by @Inteliconnect Africa </div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                         <!--<a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-red btn-social mx-2" href="https://www.youtube.com/channel/UCnn7EInu4WU8NsWKwDGHlHQ" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/IntelliconnectAfrica" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>-->
+                        <a class="btn btn-social mx-2" style="background-color:#FF0000; color:#fff;" href="https://www.youtube.com/channel/UCnn7EInu4WU8NsWKwDGHlHQ" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-social mx-2" style="background-color:#1877F2; color:#fff;" href="https://www.facebook.com/IntelliconnectAfrica" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="politiquesdeconfidentialite.html">Politiques de Confidentialité</a>
+                        <a class="link-dark text-decoration-none" href="mentionslegales.html">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
 
